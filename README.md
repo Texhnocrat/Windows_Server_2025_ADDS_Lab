@@ -1,6 +1,6 @@
 # Windows Server 2025 & Windows 11 Enterprise Lab
 
-> A fully documented, professional-grade Active Directory home lab built in Hyper-V — demonstrating hands-on proficiency in System Administration, Active Directory Domain Services, Group Policy, Network Infrastructure, and PowerShell Automation.
+> A fully documented, professional grade Active Directory home lab built in Hyper-V, demonstrating hands on proficiency in System Administration, Active Directory Domain Services, Group Policy, Network Infrastructure, and PowerShell Automation.
 
 ---
 
