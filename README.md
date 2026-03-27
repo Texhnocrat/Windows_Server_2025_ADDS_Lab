@@ -52,7 +52,7 @@ The lab simulates the kind of infrastructure a help desk technician or junior sy
 
 ### Hyper-V console & ISO downloads
 
-![Hyper-V Manager Console](./vm-setup/screenshots/1_Hyper-V_Manager_Console.png)
+![Hyper-V Manager Console](<img width="1359" height="807" alt="1  Hyper_V_Manager_Console" src="https://github.com/user-attachments/assets/56478371-d4a8-46e0-ad08-6fd4ff6fbd9d" />)
 *Opening view of Hyper-V Manager on the host machine*
 
 ![Windows Server Evaluation ISO Search](./vm-setup/screenshots/2_Windows_Server_Evaluation_ISO_Search.png)
