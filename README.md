@@ -574,7 +574,7 @@ technocrat.local
 <details>
   <summary><b>Click to expand: Phase 3 - Group Policy Objects & Security Baselines (34 Screenshots)</b></summary>
 
-  ### 1. Opening GPMC & reviewing existing policy
+  ### Opening GPMC & reviewing existing policy
   *Accessing the Group Policy Management Console to establish a baseline for the technocrat.local domain.*
 
   ![GPMC Console Navigation from Tools Menu](./Phase3.Create_Apply_GPOs/01C.%20GPMC_Console_Navigation_from_Tools_Menu.png)
@@ -591,7 +591,7 @@ technocrat.local
 
   ---
 
-  ### 2. Configuring the Password Policy
+  ### Configuring the Password Policy
   *Hardening the domain by enforcing length, complexity, and age requirements for all user accounts.*
 
   ![GPM Editor Selecting Computer Configuration](./Phase3.Create_Apply_GPOs/05C.%20GPM_Editor_Selecting_Computer_Configuration_Node.png)
@@ -635,7 +635,7 @@ technocrat.local
 
   ---
 
-  ### 3. Applying & verifying the policy
+  ### Applying & verifying the policy
   *Forcing an immediate policy refresh to ensure the new security baseline is active.*
 
   ![Applying Group Policy Changes Immediately](./Phase3.Create_Apply_GPOs/18C.%20Applying_Group_Policy_Changes_Immediately_via_CMD.png)
@@ -643,7 +643,7 @@ technocrat.local
 
   ---
 
-  ### 4. Creating & linking a GPO to the HR OU
+  ### Creating & linking a GPO to the HR OU
   *Implementing targeted restrictions for specific departments to comply with local security standards.*
 
   ![GPMC HR OU Create and Link GPO Menu](./Phase3.Create_Apply_GPOs/19C.%20GPMC_HR_OU_Create_and_Link_GPO_Menu.png)
@@ -693,7 +693,7 @@ technocrat.local
 
   ---
 
-  ### 5. Final verification
+  ### Final verification
   *Verifying the GPO hierarchy and inheritance within the management console.*
 
   ![GPMC HR OU Linked GPOs Verification](./Phase3.Create_Apply_GPOs/34C.%20GPMC_HR_OU_Linked_GPOs_Verification.png)
@@ -715,7 +715,7 @@ technocrat.local
 <details>
   <summary><b>Click to expand: Phase 4 - Joining the Windows 11 Client to the Domain (30 Screenshots)</b></summary>
 
-  ### 1. Preparing the client for domain join
+  ### Preparing the client for domain join
   *Configuring the workstation's network stack to communicate with the Technocrat Domain Controller.*
 
   ![Initial Local Logon Prompt](./Phase4.Join_Client_To_DC/01D.Initial_Local_Logon_Prompt.png)
@@ -741,7 +741,7 @@ technocrat.local
 
   ---
 
-  ### 2. Troubleshooting connectivity
+  ### Troubleshooting connectivity
   *Identifying and resolving common DNS resolution and IP subnetting issues.*
 
   ![Quick Link Menu Select System](./Phase4.Join_Client_To_DC/08D.Quick_Link_Menu_Select_System.png)
@@ -779,7 +779,7 @@ technocrat.local
 
   ---
 
-  ### 3. Joining the domain
+  ### Joining the domain
   *Authorizing the workstation's membership within the Technocrat Active Directory forest.*
 
   ![Domain Admin Credentials Join Prompt](./Phase4.Join_Client_To_DC/19D.Domain_Admin_Credentials_Join_Prompt.png)
@@ -796,7 +796,7 @@ technocrat.local
 
   ---
 
-  ### 4. First domain user logon
+  ### First domain user logon
   *Testing the integration by logging in with a managed user account.*
 
   ![Select Other User For Domain Logon](./Phase4.Join_Client_To_DC/23D.Select_Other_User_For_Domain_Logon.png)
@@ -822,7 +822,7 @@ technocrat.local
 
   ---
 
-  ### 5. Post-logon verification
+  ### Post-logon verification
   *Confirming the security context and identity of the active session.*
 
   ![Whoami All Verify Domain User Context](./Phase4.Join_Client_To_DC/30D.Whoami_All_Verify_Domain_User_Context.png)
@@ -1177,25 +1177,31 @@ technocrat.local
 - [x] Write and execute a script to loop through the CSV and create all 50 users in ADUC under the Lab-Users OU
 - [x] Verify all 50 accounts appear correctly in Active Directory Users and Computers
 
-### Building and running the bulk user import script
+<details>
+  <summary><b>Click to expand: Phase 50 (Z) - PowerShell Bulk User Import Automation (6 Screenshots)</b></summary>
 
-![User Data Source CSV File Preparation](./phase-50-powershell-script/screenshots/1Z_User_Data_Source_CSV_File_Preparation.png)
-*The CSV file containing 50 randomly generated user first and last names — the data source for the bulk import script*
+  ### Building and running the bulk user import script
+  *Automating the creation of 50 Active Directory user accounts using a PowerShell script and CSV data source.*
 
-![Initializing Users50 CSV Import File](./phase-50-powershell-script/screenshots/2Z_Initializing_Users50_CSV_Import_File.png)
-*Initializing the CSV file in preparation for the PowerShell import script*
+  ![User Data Source CSV File Preparation](./Phase50.50_Users_Script/01Z.User_Data_Source_CSV_File_Preparation.png)
+  *The CSV file containing 50 randomly generated user first and last names — the data source for the bulk import script*
 
-![Storing Users50 CSV in Lab Root Folder](./phase-50-powershell-script/screenshots/3Z_Storing_Users50_CSV_in_Lab_Root_Folder.png)
-*Storing the CSV file in a dedicated lab root folder for clean file organization*
+  ![Initializing Users50 CSV Import File](./Phase50.50_Users_Script/02Z.Initializing_Users50_CSV_Import_File.png)
+  *Initializing the CSV file in preparation for the PowerShell import script*
 
-![Launching PowerShell ISE as Administrator](./phase-50-powershell-script/screenshots/4Z_Launching_PowerShell_ISE_as_Administrator.png)
-*Launching PowerShell ISE as Administrator — required to execute AD cmdlets*
+  ![Storing Users50 CSV in Lab Root Folder](./Phase50.50_Users_Script/03Z.Storing_Users50_CSV_in_Lab_Root_Folder.png)
+  *Storing the CSV file in a dedicated lab root folder for clean file organization*
 
-![PowerShell Script Bulk Importing Users from CSV](./phase-50-powershell-script/screenshots/5Z_PowerShell_Script_Bulk_Importing_Users_from_CSV.png)
-*The PowerShell script running — looping through the CSV and creating each user account in ADUC under the Lab-Users OU*
+  ![Launching PowerShell ISE as Administrator](./Phase50.50_Users_Script/04Z.Launching_PowerShell_ISE_as_Administrator.png)
+  *Launching PowerShell ISE as Administrator — required to execute AD cmdlets*
 
-![ADUC Bulk User Import Verification Lab Users](./phase-50-powershell-script/screenshots/6Z_ADUC_Bulk_User_Import_Verification_Lab-Users.png)
-*ADUC confirming all 50 users successfully imported into the Lab-Users OU — script executed without errors*
+  ![PowerShell Script Bulk Importing Users from CSV](./Phase50.50_Users_Script/05Z.PowerShell_Script_Bulk_Importing_Users_from_CSV.png)
+  *The PowerShell script running — looping through the CSV and creating each user account in ADUC under the Lab-Users OU*
+
+  ![ADUC Bulk User Import Verification Lab-Users OU](./Phase50.50_Users_Script/06Z.ADUC_Bulk_User_Import_Verification_Lab-Users_OU.png)
+  *ADUC confirming all 50 users successfully imported into the Lab-Users OU — script executed without errors*
+
+</details>
 
 ---
 
