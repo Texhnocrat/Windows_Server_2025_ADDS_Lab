@@ -50,169 +50,175 @@ The lab simulates the kind of infrastructure a help desk technician or junior sy
 - **Storage** — Created dedicated 127 GB VHDX files for both the workstation and the server.
 - **Security Fix** — Manually enabled TPM (Trusted Platform Module) and Secure Boot in VM settings to satisfy Windows 11's hardware requirements and bypass installation blocks.
 
-### Hyper-V console & ISO downloads
+<details>
+  <summary><b>Click to expand: Phase 0 - Virtual Machine Environment Setup (45 Screenshots)</b></summary>
 
-![Hyper-V Manager Console](./Phase0.Virtual_Machines_Setup/001.%20Hyper_V_Manager_Console.png)
-*Opening view of Hyper-V Manager on the host machine*
+  ### 1. Hyper-V Console & ISO Downloads
+  *Establishing the foundation by acquiring the necessary OS images and preparing the virtualization environment.*
 
-![Windows Server Evaluation ISO Search](./vm-setup/screenshots/2_Windows_Server_Evaluation_ISO_Search.png)
-*Searching for the Windows Server 2025 Evaluation ISO*
+  ![Hyper-V Manager Console](./Phase0.Virtual_Machines_Setup/001.%20Hyper_V_Manager_Console.png)
+  *Opening view of Hyper-V Manager on the host machine*
 
-![Microsoft Evaluation Center Win11 Select](./vm-setup/screenshots/3_Microsoft_Evaluation_Center_Win11_Select.png)
-*Selecting Windows 11 Enterprise Evaluation from Microsoft's Evaluation Center*
+  ![Windows Server Evaluation ISO Search](./Phase0.Virtual_Machines_Setup/002.%20Windows_Server_Evaluation_ISO_Search.png)
+  *Searching for the Windows Server 2025 Evaluation ISO*
 
-![Win11 Enterprise ISO Download Selection](./vm-setup/screenshots/4_Win11_Enterprise_ISO_Download_Selection.png)
-*Choosing the ISO download format for Windows 11 Enterprise*
+  ![Microsoft Evaluation Center Win11 Select](./Phase0.Virtual_Machines_Setup/003.%20Microsoft_Evaluation_Center_Win11_Select.png)
+  *Selecting Windows 11 Enterprise Evaluation from Microsoft's Evaluation Center*
 
-![Win11 ISO Language Selection](./vm-setup/screenshots/5_Win11_ISO_Language_Selection.png)
-*Selecting language for the Windows 11 ISO*
+  ![Win11 Enterprise ISO Download Selection](./Phase0.Virtual_Machines_Setup/004.%20Win11_Enterprise_ISO_Download_Selection.png)
+  *Choosing the ISO download format for Windows 11 Enterprise*
 
-![Windows Server 2025 Evaluation Select](./vm-setup/screenshots/6_Windows_Server_2025_Evaluation_Select.png)
-*Selecting Windows Server 2025 Evaluation edition*
+  ![Win11 ISO Language Selection](./Phase0.Virtual_Machines_Setup/005.%20Win11_ISO_Language_Selection.png)
+  *Selecting language for the Windows 11 ISO*
 
-![Windows Server 2025 ISO Download Selection](./vm-setup/screenshots/7_Windows_Server_2025_ISO_Download_Selection.png)
-*Choosing the ISO download format for Server 2025*
+  ![Windows Server 2025 Evaluation Select](./Phase0.Virtual_Machines_Setup/006.%20Windows_Server_2025_Evaluation_Select.png)
+  *Selecting Windows Server 2025 Evaluation edition*
 
-![Windows Server 2025 ISO Language Selection](./vm-setup/screenshots/8_Windows_Server_2025_ISO_Language_Selection.png)
-*Selecting language for the Server 2025 ISO*
+  ![Windows Server 2025 ISO Download Selection](./Phase0.Virtual_Machines_Setup/007.%20Windows_Server_2025_ISO_Download_Selection.png)
+  *Choosing the ISO download format for Server 2025*
 
-![ISO File Organization](./vm-setup/screenshots/9_ISO_File_Organization.png)
-*Both ISOs organized in a dedicated folder on the host machine*
+  ![Windows Server 2025 ISO Language Selection](./Phase0.Virtual_Machines_Setup/008.%20Windows_Server_2025_ISO_Language_Selection.png)
+  *Selecting language for the Server 2025 ISO*
 
-### New VM Wizard — shared settings
+  ![ISO File Organization](./Phase0.Virtual_Machines_Setup/009.%20ISO_File_Organization.png)
+  *Both ISOs organized in a dedicated folder on the host machine*
 
-![Hyper-V New Virtual Machine Wizard Start](./vm-setup/screenshots/10_Hyper-V_New_Virtual_Machine_Wizard_Start.png)
-*Launching the New Virtual Machine Wizard in Hyper-V Manager*
+  ---
 
-![New VM Wizard Before You Begin](./vm-setup/screenshots/11_New_VM_Wizard_Before_You_Begin.png)
-*The Before You Begin screen of the New VM Wizard*
+  ### 2. New VM Wizard — Shared Settings
+  *Configuring the virtual hardware specifications for both the Domain Controller and the Workstation.*
 
-![New VM Specify Name Win11](./vm-setup/screenshots/12_New_VM_Specify_Name_Win11.png)
-*Naming the Windows 11 VM*
+  ![Hyper-V New Virtual Machine Wizard Start](./Phase0.Virtual_Machines_Setup/010.%20Hyper-V_New_Virtual_Machine_Wizard_Start.png)
+  *Launching the New Virtual Machine Wizard in Hyper-V Manager*
 
-![New VM Specify Generation Gen 2](./vm-setup/screenshots/13_New_VM_Specify_Generation_Gen2.png)
-*Selecting Generation 2 for UEFI support and modern security features*
+  ![New VM Wizard Before You Begin](./Phase0.Virtual_Machines_Setup/011.%20New_VM_Wizard_Before_You_Begin.png)
+  *The Before You Begin screen of the New VM Wizard*
 
-![New VM Assign Memory 4GB Dynamic](./vm-setup/screenshots/14_New_VM_Assign_Memory_4GB_Dynamic.png)
-*Assigning 4096 MB RAM with Dynamic Memory enabled*
+  ![New VM Specify Name Win11](./Phase0.Virtual_Machines_Setup/012.%20New_VM_Specify_Name_Win11.png)
+  *Naming the Windows 11 VM*
 
-![New VM Connect Virtual Hard Disk 127GB](./vm-setup/screenshots/15_New_VM_Connect_Virtual_Hard_Disk_127GB.png)
-*Creating a 127 GB VHDX virtual hard disk*
+  ![New VM Specify Generation Gen 2](./Phase0.Virtual_Machines_Setup/013.%20New_VM_Specify_Generation_Gen2.png)
+  *Selecting Generation 2 for UEFI support and modern security features*
 
-![New VM Mount Win11 Enterprise ISO](./vm-setup/screenshots/16_New_VM_Mount_Win11_Enterprise_ISO.png)
-*Mounting the Windows 11 Enterprise ISO to the virtual DVD drive*
+  ![New VM Assign Memory 4GB Dynamic](./Phase0.Virtual_Machines_Setup/014.%20New_VM_Assign_Memory_4GB_Dynamic.png)
+  *Assigning 4096 MB RAM with Dynamic Memory enabled*
 
-![New VM Summary Win11 Enterprise](./vm-setup/screenshots/17_New_VM_Summary_Win11_Enterprise.png)
-*Summary screen confirming all VM settings before creation*
+  ![New VM Connect Virtual Hard Disk 127GB](./Phase0.Virtual_Machines_Setup/015.%20New_VM_Connect_Virtual_Hard_Disk_127GB.png)
+  *Creating a 127 GB VHDX virtual hard disk*
 
-![Hyper-V Manage VMs Created Off State](./vm-setup/screenshots/18_Hyper-V_Manage_VMs_Created_Off_State.png)
-*Both VMs visible in Hyper-V Manager in the Off state, ready to boot*
+  ![New VM Mount Win11 Enterprise ISO](./Phase0.Virtual_Machines_Setup/016.%20New_VM_Mount_Win11_Enterprise_ISO.png)
+  *Mounting the Windows 11 Enterprise ISO to the virtual DVD drive*
 
-![Hyper-V VM Security Enable TPM](./vm-setup/screenshots/26_Hyper-V_VM_Security_Enable_TPM.png)
-*Manually enabling TPM and Secure Boot in VM settings to satisfy Windows 11 hardware requirements*
+  ![New VM Summary Win11 Enterprise](./Phase0.Virtual_Machines_Setup/017.%20New_VM_Summary_Win11_Enterprise.png)
+  *Summary screen confirming all VM settings before creation*
 
-### 2. Windows 11 Workstation Deployment
+  ![Hyper-V Manage VMs Created Off State](./Phase0.Virtual_Machines_Setup/018.%20Hyper_V_Manager_VMs_Created_Off_State.png)
+  *Both VMs visible in Hyper-V Manager in the Off state, ready to boot*
 
-| Setting | Value |
-|---|---|
-| Version | Windows 11 Enterprise Evaluation |
-| Local Admin Account | `Workstation.1` |
-| Privacy | Customized to minimize background telemetry |
+  ![Hyper-V VM Security Enable TPM](./Phase0.Virtual_Machines_Setup/026.%20Hyper-V_VM_Security_Enable_TPM.png)
+  *Manually enabling TPM and Secure Boot in VM settings to satisfy Windows 11 hardware requirements*
 
-**Outcome:** Successfully reached the Windows 11 desktop, confirming that the virtual hardware (TPM + Secure Boot) met modern OS requirements.
+  ---
 
-### Booting and installing Windows 11
+  ### 3. Windows 11 Workstation Deployment
+  *Deployment of the client machine to be used for future help desk and administrative scenarios.*
 
-![Win11 Workstation Right-Click Start](./vm-setup/screenshots/19_Win11_Workstation_Right-Click_Start.png)
-*Right-clicking the VM in Hyper-V to start it for the first time*
+  | Setting | Value |
+  |---|---|
+  | Version | Windows 11 Enterprise Evaluation |
+  | Local Admin Account | `Workstation.1` |
+  | Privacy | Customized to minimize background telemetry |
 
-![Win11 Workstation Running State](./vm-setup/screenshots/20_Win11_Workstation_Running_State.png)
-*VM successfully booted into the Windows 11 installer*
+  ![Win11 Workstation Right-Click Start](./Phase0.Virtual_Machines_Setup/019.%20Win11_Workstation_Right-Click_Start.png)
+  *Right-clicking the VM in Hyper-V to start it for the first time*
 
-![Win11 Boot Prompt Press Any Key](./vm-setup/screenshots/21_Win11_Boot_Prompt_Press_Any_Key.png)
-*Press any key to boot from the ISO prompt*
+  ![Win11 Workstation Running State](./Phase0.Virtual_Machines_Setup/020.%20Win11_Workstation_Running_State.png)
+  *VM successfully booted into the Windows 11 installer*
 
-![Win11 Setup Language and Regional Settings](./vm-setup/screenshots/22_Win11_Setup_Language_and_Regional_Settings.png)
-*Selecting language and regional settings in the Windows 11 Setup wizard*
+  ![Win11 Boot Prompt Press Any Key](./Phase0.Virtual_Machines_Setup/021.%20Win11_Boot_Prompt_Press_Any_Key.png)
+  *Press any key to boot from the ISO prompt*
 
-![Win11 Install Selection and Data Consent](./vm-setup/screenshots/23_Win11_Install_Selection_and_Data_Consent.png)
-*Accepting the installation terms*
+  ![Win11 Setup Language and Regional Settings](./Phase0.Virtual_Machines_Setup/022.%20Win11_Setup_Language_and_Regional_Settings.png)
+  *Selecting language and regional settings in the Windows 11 Setup wizard*
 
-![Win11 Installation Error TPM Requirement](./vm-setup/screenshots/24_Win11_Installation_Error_TPM_Requirement.png)
-*TPM requirement error encountered — resolved by enabling TPM in Hyper-V VM security settings*
+  ![Win11 Install Selection and Data Consent](./Phase0.Virtual_Machines_Setup/023.%20Win11_Install_Selection_and_Data_Consent.png)
+  *Accepting the installation terms*
 
-![Win11 VM Settings Menu](./vm-setup/screenshots/25_Win11_VM_Settings_Menu.png)
-*Accessing VM settings to apply the TPM/Secure Boot fix*
+  ![Win11 Installation Error TPM Requirement](./Phase0.Virtual_Machines_Setup/024.%20Win11_Installation_Error_TPM_Requirement.png)
+  *TPM requirement error encountered — resolved by enabling TPM in settings*
 
-![Win11 EULA Agreement](./vm-setup/screenshots/27_Win11_EULA_Agreement.png)
-*Accepting the Windows 11 End User License Agreement*
+  ![Win11 VM Settings Menu](./Phase0.Virtual_Machines_Setup/025.%20Win11_VM_Settings_Menu.png)
+  *Accessing VM settings to apply the TPM/Secure Boot fix*
 
-![Win11 Install Location Unallocated Space](./vm-setup/screenshots/28_Win11_Install_Location_Unallocated_Space.png)
-*Selecting the unallocated 127 GB disk for installation*
+  ![Win11 EULA Agreement](./Phase0.Virtual_Machines_Setup/027.%20Windows_11_EULA_Agreemen.png)
+  *Accepting the Windows 11 End User License Agreement*
 
-![Win11 Setup Installing OS](./vm-setup/screenshots/29_Win11_Setup_Installing_OS.png)
-*Windows 11 installation in progress*
+  ![Win11 Install Location Unallocated Space](./Phase0.Virtual_Machines_Setup/028.%20Win11_Install_Location_Unallocated_Space.png)
+  *Selecting the unallocated 127 GB disk for installation*
 
-![Win11 Installing Files Progress](./vm-setup/screenshots/30_Win11_Installing_Files_Progress.png)
-*File installation progress screen*
+  ![Win11 Setup Installing OS](./Phase0.Virtual_Machines_Setup/029.%20Windows_11_Setup_Installing_OS.png)
+  *Windows 11 installation in progress*
 
-### OOBE — Out of Box Experience
+  ![Win11 Installing Files Progress](./Phase0.Virtual_Machines_Setup/030.%20Windows_11_Installing_Files_Progress.png)
+  *File installation progress screen*
 
-![Win11 OOBE Region Selection](./vm-setup/screenshots/31_Win11_OOBE_Region_Selection.png)
-*Selecting region during the Windows 11 Out of Box Experience*
+  #### OOBE — Out of Box Experience
+  ![Win11 OOBE Region Selection](./Phase0.Virtual_Machines_Setup/031.%20Win11_OOBE_Region_Selection.png)
+  *Selecting region during the Windows 11 Out of Box Experience*
 
-![Win11 OOBE Create Local User Workstation.1](./vm-setup/screenshots/32_Win11_OOBE_Create_Local_User_Workstation.1.png)
-*Creating the local administrator account named Workstation.1*
+  ![Win11 OOBE Create Local User Workstation.1](./Phase0.Virtual_Machines_Setup/032.%20Win11_OOBE_Create_Local_User_Workstation.1.png)
+  *Creating the local administrator account named Workstation.1*
 
-![Win11 OOBE Set Local User Password](./vm-setup/screenshots/33_Win11_OOBE_Set_Local_User_Password.png)
-*Setting the password for the Workstation.1 local account*
+  ![Win11 OOBE Set Local User Password](./Phase0.Virtual_Machines_Setup/033.%20Win11_OOBE_Set_Local_User_Password.png)
+  *Setting the password for the Workstation.1 local account*
 
-![Win11 OOBE Set Security Questions](./vm-setup/screenshots/34_Win11_OOBE_Set_Security_Questions.png)
-*Configuring security questions for the local account*
+  ![Win11 OOBE Set Security Questions](./Phase0.Virtual_Machines_Setup/034.%20Win11_OOBE_Set_Security_Questions.png)
+  *Configuring security questions for the local account*
 
-![Win11 OOBE Privacy Settings Selection](./vm-setup/screenshots/35_Win11_OOBE_Privacy_Settings_Selection.png)
-*Customizing privacy settings to minimize background telemetry*
+  ![Win11 OOBE Privacy Settings Selection](./Phase0.Virtual_Machines_Setup/035.%20Win11_OOBE_Privacy_Settings_Selection.png)
+  *Customizing privacy settings to minimize background telemetry*
 
-![Win11 OOBE Final Configuration Screen](./vm-setup/screenshots/36_Win11_OOBE_Final_Configuration_Screen.png)
-*Final configuration screen before reaching the desktop*
+  ![Win11 OOBE Final Configuration Screen](./Phase0.Virtual_Machines_Setup/036.%20Win11_OOBE_Final_Configuration_Screen.png)
+  *Final configuration screen before reaching the desktop*
 
-![Win11 Workstation Initial Login Screen](./vm-setup/screenshots/37_Win11_Workstation_Initial_Login_Screen.png)
-*First login screen for the Workstation.1 account*
+  ![Win11 Workstation Initial Login Screen](./Phase0.Virtual_Machines_Setup/037.%20Win11_Workstation_Initial_Login_Screen.png)
+  *First login screen for the Workstation.1 account*
 
-![Win11 Successful OS Installation Complete](./vm-setup/screenshots/38_Win11_Successful_OS_Installation_Complete.png)
-*Windows 11 Enterprise desktop confirming successful installation*
+  ![Win11 Successful OS Installation Complete](./Phase0.Virtual_Machines_Setup/038.%20Win11_Successful_OS_Installation_Complete.png)
+  *Windows 11 Enterprise desktop confirming successful installation*
 
-### 3. Windows Server 2025 Deployment
+  ---
 
-| Setting | Value |
-|---|---|
-| Version | Windows Server 2025 Standard (Desktop Experience) |
-| Initial Account | Built-in Administrator |
+  ### 4. Windows Server 2025 Deployment
+  *Setting up the core server that will eventually serve as the Active Directory Domain Controller.*
 
-**Outcome:** Completed OOBE and confirmed access to the Server Manager Dashboard, marking the server as ready for role installation.
+  | Setting | Value |
+  |---|---|
+  | Version | Windows Server 2025 Standard (Desktop Experience) |
+  | Initial Account | Built-in Administrator |
 
-### Installing Windows Server 2025
+  ![Windows Server 2025 Setup Language Selection](./Phase0.Virtual_Machines_Setup/039.%20Windows_Server_2025_Setup_Language_Selection.png)
+  *Language selection screen in the Windows Server 2025 installer*
 
-![Windows Server 2025 Setup Language Selection](./vm-setup/screenshots/39_Windows_Server_2025_Setup_Language_Selection.png)
-*Language selection screen in the Windows Server 2025 installer*
+  ![Windows Server 2025 OS Edition Selection](./Phase0.Virtual_Machines_Setup/040.%20Windows_Server_2025_OS_Edition_Selection.png)
+  *Selecting Windows Server 2025 Datacenter (Desktop Experience)*
 
-![Windows Server 2025 OS Edition Selection](./vm-setup/screenshots/40_Windows_Server_2025_OS_Edition_Selection.png)
-*Selecting Windows Server 2025 Standard with Desktop Experience*
+  ![Windows Server 2025 OS Installation Start](./Phase0.Virtual_Machines_Setup/041.%20Server_2025_OS_Installation_Start.png)
+  *Server 2025 installation begins*
 
-![Windows Server 2025 OS Installation Start](./vm-setup/screenshots/41_Server_2025_OS_Installation_Start.png)
-*Server 2025 installation begins*
+  ![Server 2025 Set Administrator Password](./Phase0.Virtual_Machines_Setup/042.%20Server_2025_Set_Administrator_Password.png)
+  *Setting the built-in Administrator password*
 
-![Server 2025 Set Administrator Password](./vm-setup/screenshots/42_Server_2025_Set_Administrator_Password.png)
-*Setting the built-in Administrator password*
+  ![Server 2025 Admin Password Confirmation](./Phase0.Virtual_Machines_Setup/043.%20Server_2025_Admin_Password_Confirmation.png)
+  *Confirming the Administrator password*
 
-![Server 2025 Admin Password Confirmation](./vm-setup/screenshots/43_Server_2025_Admin_Password_Confirmation.png)
-*Confirming the Administrator password*
+  ![Server 2025 Initial Administrator Login](./Phase0.Virtual_Machines_Setup/044.%20Server_2025_Initial_Administrator_Login.png)
+  *First login as the built-in Administrator account*
 
-![Server 2025 Initial Administrator Login](./vm-setup/screenshots/44_Server_2025_Initial_Administrator_Login.png)
-*First login as the built-in Administrator account*
+  ![Server 2025 Initial Server Manager Launch](./Phase0.Virtual_Machines_Setup/045.%20Server_2025_Initial_Server_Manager_Launch.png)
+  *Server Manager Dashboard confirming readiness for role deployment*
 
-![Server 2025 Initial Server Manager Launch](./vm-setup/screenshots/45_Server_2025_Initial_Server_Manager_Launch.png)
-*Server Manager Dashboard confirming successful installation and readiness for role deployment*
+</details>
 
 ---
 
