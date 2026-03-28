@@ -571,117 +571,135 @@ technocrat.local
 | Desktop Restrictions | HR OU | Screensaver lockout, browser controls |
 | Drive Mapping | Sales OU | Map shared network drive on login |
 
-### Opening GPMC & reviewing existing policy
+<details>
+  <summary><b>Click to expand: Phase 3 - Group Policy Objects & Security Baselines (34 Screenshots)</b></summary>
 
-![GPMC Console Navigation from Tools Menu](./phase-3-group-policy/screenshots/1C_GPMC_Console_Navigation_from_Tools_Menu.png)
-*Opening the Group Policy Management Console from Server Manager Tools menu*
+  ### 1. Opening GPMC & reviewing existing policy
+  *Accessing the Group Policy Management Console to establish a baseline for the technocrat.local domain.*
 
-![GPMC Technocrat Local Initial View](./phase-3-group-policy/screenshots/2C_GPMC_Technocrat_Local_Initial_View.png)
-*GPMC initial view showing the technocrat.local domain and existing Default Domain Policy*
+  ![GPMC Console Navigation from Tools Menu](./Phase3.Create_Apply_GPOs/01C.%20GPMC_Console_Navigation_from_Tools_Menu.png)
+  *Opening the Group Policy Management Console from Server Manager Tools menu*
 
-![GPMC Edit Default Domain Policy Menu](./phase-3-group-policy/screenshots/3C_GPMC_Edit_Default_Domain_Policy_Menu.png)
-*Right-clicking the Default Domain Policy to open it for editing*
+  ![GPMC Technocrat Local Initial View](./Phase3.Create_Apply_GPOs/02C.%20GPMC_Technocrat_Local_Initial_View.png)
+  *GPMC initial view showing the technocrat.local domain and existing Default Domain Policy*
 
-![GPM Editor Default Domain Policy Overview](./phase-3-group-policy/screenshots/4C_GPM_Editor_Default_Domain_Policy_Overview.png)
-*Group Policy Management Editor showing the full Default Domain Policy structure*
+  ![GPMC Edit Default Domain Policy Menu](./Phase3.Create_Apply_GPOs/03C.%20GPMC_Edit_Default_Domain_Policy_Menu.png)
+  *Right-clicking the Default Domain Policy to open it for editing*
 
-### Configuring the Password Policy
+  ![GPM Editor Default Domain Policy Overview](./Phase3.Create_Apply_GPOs/04C.%20GPM_Editor_Default_Domain_Policy_Overview.png)
+  *Group Policy Management Editor showing the full Default Domain Policy structure*
 
-![GPM Editor Selecting Computer Configuration](./phase-3-group-policy/screenshots/5C_GPM_Editor_Selecting_Computer_Configuration.png)
-*Navigating to Computer Configuration to locate security settings*
+  ---
 
-![GPM Editor Expanding Computer Policies Node](./phase-3-group-policy/screenshots/6C_GPM_Editor_Expanding_Computer_Policies_Node.png)
-*Expanding the Policies node under Computer Configuration*
+  ### 2. Configuring the Password Policy
+  *Hardening the domain by enforcing length, complexity, and age requirements for all user accounts.*
 
-![GPM Editor Selecting Windows Settings Node](./phase-3-group-policy/screenshots/7C_GPM_Editor_Selecting_Windows_Settings_Node.png)
-*Navigating into Windows Settings*
+  ![GPM Editor Selecting Computer Configuration](./Phase3.Create_Apply_GPOs/05C.%20GPM_Editor_Selecting_Computer_Configuration_Node.png)
+  *Navigating to Computer Configuration to locate security settings*
 
-![GPM Editor Selecting Security Settings Node](./phase-3-group-policy/screenshots/8C_GPM_Editor_Selecting_Security_Settings_Node.png)
-*Selecting Security Settings to access Account Policies*
+  ![GPM Editor Expanding Computer Policies Node](./Phase3.Create_Apply_GPOs/06C.%20GPM_Editor_Expanding_Computer_Policies_Node.png)
+  *Expanding the Policies node under Computer Configuration*
 
-![GPM Editor Selecting Account Policies Node](./phase-3-group-policy/screenshots/9C_GPM_Editor_Selecting_Account_Policies_Node.png)
-*Opening Account Policies to reach Password Policy settings*
+  ![GPM Editor Selecting Windows Settings Node](./Phase3.Create_Apply_GPOs/07C.%20GPM_Editor_Selecting_Windows_Settings_Node.png)
+  *Navigating into Windows Settings*
 
-![GPM Editor Selecting Password Policy Node](./phase-3-group-policy/screenshots/10C_GPM_Editor_Selecting_Password_Policy_Node.png)
-*Selecting the Password Policy node to view and edit all password settings*
+  ![GPM Editor Selecting Security Settings Node](./Phase3.Create_Apply_GPOs/08C.%20GPM_Editor_Selecting_Security_Settings_Node.png)
+  *Selecting Security Settings to access Account Policies*
 
-![GPM Editor Selecting Minimum Password Length](./phase-3-group-policy/screenshots/11C_GPM_Editor_Selecting_Minimum_Password_Length.png)
-*Opening the Minimum Password Length policy setting*
+  ![GPM Editor Selecting Account Policies Node](./Phase3.Create_Apply_GPOs/09C.%20GPM_Editor_Selecting_Account_Policies_Node.png)
+  *Opening Account Policies to reach Password Policy settings*
 
-![GPM Editor Minimum Password Length Property](./phase-3-group-policy/screenshots/12C_GPM_Editor_Minimum_Password_Length_Property.png)
-*Setting the minimum password length value*
+  ![GPM Editor Selecting Password Policy Node](./Phase3.Create_Apply_GPOs/10C.%20GPM_Editor_Selecting_Password_Policy_Node.png)
+  *Selecting the Password Policy node to view and edit all password settings*
 
-![Password Policy Set 10 Character Minimum](./phase-3-group-policy/screenshots/13C_Password_Policy_Set_10_Character_Minimum.png)
-*Minimum password length set to 10 characters*
+  ![GPM Editor Selecting Minimum Password Length](./Phase3.Create_Apply_GPOs/11C.%20GPM_Editor_Selecting_Minimum_Password_Length_Policy.png)
+  *Opening the Minimum Password Length policy setting*
 
-![Password Policy Enable Complexity Requirements](./phase-3-group-policy/screenshots/14C_Password_Policy_Enable_Complexity_Requirements.png)
-*Enabling password complexity requirements — uppercase, lowercase, numbers, and symbols*
+  ![GPM Editor Minimum Password Length Property](./Phase3.Create_Apply_GPOs/12C.%20GPM_Editor_Minimum_Password_Length_Properties_Default.png)
+  *Setting the minimum password length value*
 
-![Password Policy Complexity Requirement Properties](./phase-3-group-policy/screenshots/15C_Password_Policy_Complexity_Requirement_Properties.png)
-*Complexity requirement properties confirming the setting is enabled*
+  ![Password Policy Set 10 Character Minimum](./Phase3.Create_Apply_GPOs/13C.%20Password_Policy_Set_10_Character_Minimum.png)
+  *Minimum password length set to 10 characters*
 
-![GPM Editor Selecting Maximum Password Age](./phase-3-group-policy/screenshots/16C_GPM_Editor_Selecting_Maximum_Password_Age.png)
-*Opening the Maximum Password Age setting*
+  ![Password Policy Enable Complexity Requirements](./Phase3.Create_Apply_GPOs/14C.%20Password_Policy_Enable_Complexity_Requirements.png)
+  *Enabling password complexity requirements — uppercase, lowercase, numbers, and symbols*
 
-![Password Policy Set 90 Day Maximum Password Age](./phase-3-group-policy/screenshots/17C_Password_Policy_Set_90_Day_Maximum_Password_Age.png)
-*Setting maximum password age to 90 days — users must change password every 90 days*
+  ![Password Policy Complexity Requirement Properties](./Phase3.Create_Apply_GPOs/15C.%20Password_Policy_Complexity_Requirement_Properties_Enabled.png)
+  *Complexity requirement properties confirming the setting is enabled*
 
-### Applying & verifying the policy
+  ![GPM Editor Selecting Maximum Password Age](./Phase3.Create_Apply_GPOs/16C.%20GPM_Editor_Selecting_Maximum_Password_Age_Policy.png)
+  *Opening the Maximum Password Age setting*
 
-![Applying Group Policy Changes Immediately](./phase-3-group-policy/screenshots/18C_Applying_Group_Policy_Changes_Immediately.png)
-*Running gpupdate /force to immediately apply the updated password policy*
+  ![Password Policy Set 90 Day Maximum Password Age](./Phase3.Create_Apply_GPOs/17C.%20Password_Policy_Set_90_Day_Maximum_Password_Age.png)
+  *Setting maximum password age to 90 days — users must change password every 90 days*
 
-### Creating & linking a GPO to the HR OU
+  ---
 
-![GPMC HR OU Create and Link GPO Menu](./phase-3-group-policy/screenshots/19C_GPMC_HR_OU_Create_and_Link_GPO_Menu.png)
-*Right-clicking the HR OU in GPMC to create and link a new GPO*
+  ### 3. Applying & verifying the policy
+  *Forcing an immediate policy refresh to ensure the new security baseline is active.*
 
-![GPMC Creating Targeted GPO for HR OU](./phase-3-group-policy/screenshots/20C_GPMC_Creating_Targeted_GPO_for_HR_OU.png)
-*Naming and creating the new GPO targeted specifically at the HR OU*
+  ![Applying Group Policy Changes Immediately](./Phase3.Create_Apply_GPOs/18C.%20Applying_Group_Policy_Changes_Immediately_via_CMD.png)
+  *Running gpupdate /force to immediately apply the updated password policy*
 
-![GPMC Opening HR Specific Policy Editor](./phase-3-group-policy/screenshots/21C_GPMC_Opening_HR_Specific_Policy_Editor.png)
-*Opening the HR GPO in the Group Policy Management Editor*
+  ---
 
-![GPM Editor Selecting Computer Configuration HR](./phase-3-group-policy/screenshots/22C_GPM_Editor_Selecting_Computer_Configuration_HR.png)
-*Navigating to Computer Configuration within the HR GPO*
+  ### 4. Creating & linking a GPO to the HR OU
+  *Implementing targeted restrictions for specific departments to comply with local security standards.*
 
-![GPM Editor Expanding HR Computer Policies](./phase-3-group-policy/screenshots/23C_GPM_Editor_Expanding_HR_Computer_Policies.png)
-*Expanding the Computer Policies node in the HR GPO*
+  ![GPMC HR OU Create and Link GPO Menu](./Phase3.Create_Apply_GPOs/19C.%20GPMC_HR_OU_Create_and_Link_GPO_Menu.png)
+  *Right-clicking the HR OU in GPMC to create and link a new GPO*
 
-![GPM Editor Selecting Administrative Templates](./phase-3-group-policy/screenshots/24C_GPM_Editor_Selecting_Administrative_Templates.png)
-*Selecting Administrative Templates to access desktop and system restriction settings*
+  ![GPMC Creating Targeted GPO for HR OU](./Phase3.Create_Apply_GPOs/20C.%20GPMC_Creating_Targeted_GPO_for_HR_OU.png)
+  *Naming and creating the new GPO targeted specifically at the HR OU*
 
-![GPM Editor Selecting Control Panel Policy Node](./phase-3-group-policy/screenshots/25C_GPM_Editor_Selecting_Control_Panel_Policy_Node.png)
-*Navigating to the Control Panel policy node*
+  ![GPMC Opening HR Specific Policy Editor](./Phase3.Create_Apply_GPOs/21C.%20GPMC_Opening_HR_Specific_Policy_Editor.png)
+  *Opening the HR GPO in the Group Policy Management Editor*
 
-![GPM Editor Selecting Personalization Policy Node](./phase-3-group-policy/screenshots/26C_GPM_Editor_Selecting_Personalization_Policy_Node.png)
-*Selecting the Personalization policy node for screensaver and desktop settings*
+  ![GPM Editor Selecting Computer Configuration HR](./Phase3.Create_Apply_GPOs/22C.%20GPM_Editor_Selecting_Computer_Configuration_Node_for_HR_GPO.png)
+  *Navigating to Computer Configuration within the HR GPO*
 
-![GPM Editor Reviewing Machine Personalization](./phase-3-group-policy/screenshots/27C_GPM_Editor_Reviewing_Machine_Personalization.png)
-*Reviewing available personalization policy settings*
+  ![GPM Editor Expanding HR Computer Policies](./Phase3.Create_Apply_GPOs/23C.%20GPM_Editor_Expanding_HR_Computer_Policies.png)
+  *Expanding the Computer Policies node in the HR GPO*
 
-![GPM Editor User Configuration Personalization](./phase-3-group-policy/screenshots/28C_GPM_Editor_User_Configuration_Personalization.png)
-*Switching to User Configuration for personalization policy settings*
+  ![GPM Editor Selecting Administrative Templates](./Phase3.Create_Apply_GPOs/24C.%20GPM_Editor_Selecting_Administrative_Templates_Node.png)
+  *Selecting Administrative Templates to access desktop and system restriction settings*
 
-![GPM Editor Enabling Desktop Screen Saver Policy](./phase-3-group-policy/screenshots/29C_GPM_Editor_Enabling_Desktop_Screen_Saver_Policy.png)
-*Enabling the screen saver policy for HR OU workstations*
+  ![GPM Editor Selecting Control Panel Policy Node](./Phase3.Create_Apply_GPOs/25C.%20GPM_Editor_Selecting_Control_Panel_Policy_Node.png)
+  *Navigating to the Control Panel policy node*
 
-![GPM Editor Selecting Password Protect Screen](./phase-3-group-policy/screenshots/30C_GPM_Editor_Selecting_Password_Protect_Screen.png)
-*Enabling password protection on the screen saver — workstation locks after timeout*
+  ![GPM Editor Selecting Personalization Policy Node](./Phase3.Create_Apply_GPOs/26C.%20GPM_Editor_Selecting_Personalization_Policy_Node.png)
+  *Selecting the Personalization policy node for screensaver and desktop settings*
 
-![GPO HR Desktop Lockout Enable Password Protection](./phase-3-group-policy/screenshots/31C_GPO_HR_Desktop_Lockout_Enable_Password_Protection.png)
-*Confirming password-protected screen saver lockout is enabled for HR users*
+  ![GPM Editor Reviewing Machine Personalization](./Phase3.Create_Apply_GPOs/27C.%20GPM_Editor_Reviewing_Machine_Personalization_Options.png)
+  *Reviewing available personalization policy settings*
 
-![GPM Editor Selecting Screen Saver Timeout Policy](./phase-3-group-policy/screenshots/32C_GPM_Editor_Selecting_Screen_Saver_Timeout_Policy.png)
-*Opening the screen saver timeout policy setting*
+  ![GPM Editor User Configuration Personalization](./Phase3.Create_Apply_GPOs/28C.%20GPM_Editor_User_Configuration_Personalization_Policies.png)
+  *Switching to User Configuration for personalization policy settings*
 
-![GPO HR Desktop Lockout Set 300 Second Timeout](./phase-3-group-policy/screenshots/33C_GPO_HR_Desktop_Lockout_Set_300_Second_Timeout.png)
-*Setting screen saver timeout to 300 seconds (5 minutes) for HR workstations*
+  ![GPM Editor Enabling Desktop Screen Saver Policy](./Phase3.Create_Apply_GPOs/29C.%20GPM_Editor_Enabling_Desktop_Screen_Saver_Policy.png)
+  *Enabling the screen saver policy for HR OU workstations*
 
-### Final verification
+  ![GPM Editor Selecting Password Protect Screen](./Phase3.Create_Apply_GPOs/30C.%20GPM_Editor_Selecting_Password_Protect_Screen_Saver_Policy.png)
+  *Enabling password protection on the screen saver — workstation locks after timeout*
 
-![GPMC HR OU Linked GPOs Verification](./phase-3-group-policy/screenshots/34C_GPMC_HR_OU_Linked_GPOs_Verification.png)
-*GPMC showing both GPOs correctly linked — Password Policy at domain level, Desktop Lockout at HR OU level*
+  ![GPO HR Desktop Lockout Enable Password Protection](./Phase3.Create_Apply_GPOs/31C.%20GPO_HR_Desktop_Lockout_Enable_Password_Protection.png)
+  *Confirming password-protected screen saver lockout is enabled for HR users*
+
+  ![GPM Editor Selecting Screen Saver Timeout Policy](./Phase3.Create_Apply_GPOs/32C.%20GPM_Editor_Selecting_Screen_Saver_Timeout_Policy.png)
+  *Opening the screen saver timeout policy setting*
+
+  ![GPO HR Desktop Lockout Set 300 Second Timeout](./Phase3.Create_Apply_GPOs/33C.%20GPO_HR_Desktop_Lockout_Set_300_Second_Timeout.png)
+  *Setting screen saver timeout to 300 seconds (5 minutes) for HR workstations*
+
+  ---
+
+  ### 5. Final verification
+  *Verifying the GPO hierarchy and inheritance within the management console.*
+
+  ![GPMC HR OU Linked GPOs Verification](./Phase3.Create_Apply_GPOs/34C.%20GPMC_HR_OU_Linked_GPOs_Verification.png)
+  *GPMC showing both GPOs correctly linked — Password Policy at domain level, Desktop Lockout at HR OU level*
+
+</details>
 
 ---
 
