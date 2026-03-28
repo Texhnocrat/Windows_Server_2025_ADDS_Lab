@@ -237,106 +237,126 @@ The lab simulates the kind of infrastructure a help desk technician or junior sy
 - **DNS pointed to loopback** — After promotion, the DC runs its own DNS server. Pointing it to `127.0.0.1` ensures it resolves internal records correctly.
 - **New Forest** — `technocrat.local` was created as a fresh AD forest, establishing the root domain for the entire lab environment.
 
-### Server Manager & initial configuration
+That is a great catch. Keeping the count in the header makes the documentation feel much more consistent and lets anyone reading it know exactly how deep the "deep dive" goes.
 
-![Server Manager Local Server Properties Default](./phase-1-dc-promotion/screenshots/1A_Server_Manager_Local_Server_Properties_Default.png)
-*Server Manager opening view before any configuration — baseline starting point*
+Here is the updated Markdown for Phase 1 with the (31 Screenshots) tag included in the summary header. I also ensured the folder path Phase1.Windows_Server_Config_PromoteDC and the exact filenames from your upload (like 20A. Server_Manager_Promote_to_Domain_Controller_Link.png) are perfectly preserved.
 
-![Rename Server to DC01](./phase-1-dc-promotion/screenshots/2A_Rename_Server_to_DC01.png)
-*Renaming the server to Technocrat-DC01 via Server Manager Local Server properties*
+Markdown
+<details>
+  <summary><b>Click to expand: Phase 1 - AD DS Installation & DC Promotion (31 Screenshots)</b></summary>
 
-![Network Settings Initial IP Assignment](./phase-1-dc-promotion/screenshots/3A_Network_Settings_Initial_IP_Assignment.png)
-*Opening network adapter settings to begin static IP configuration*
+  ### Server Manager & initial configuration
+  *Preparing the baseline server environment by configuring the hostname and static IP stack required for a Domain Controller.*
 
-![Network Settings Switch to Manual IP](./phase-1-dc-promotion/screenshots/4A_Network_Settings_Switch_to_Manual_IP.png)
-*Switching from DHCP to manual IP assignment*
+  ![Server Manager Local Server Properties Default](./Phase1.Windows_Server_Config_PromoteDC/01A.%20Server_Manager_Local_Server_Properties_Default.png)
+  *Server Manager opening view before any configuration — baseline starting point*
 
-![IPv4 Static IP and DNS Configuration](./phase-1-dc-promotion/screenshots/5A_IPv4_Static_IP_and_DNS_Configuration.png)
-*Setting static IP 192.168.1.10 with DNS pointed to 127.0.0.1 — the DC will serve as its own DNS resolver after promotion*
+  ![Rename Server to DC01](./Phase1.Windows_Server_Config_PromoteDC/02A.%20Rename_Server_to_DC01.png)
+  *Renaming the server to Technocrat-DC01 via Server Manager Local Server properties*
 
-![Local Server Properties Static IPv4 Confirmed](./phase-1-dc-promotion/screenshots/6A_Local_Server_Properties_Static_IPv4_Confirmed.png)
-*Server Manager confirming the static IP is now applied*
+  ![Network Settings Initial IP Assignment](./Phase1.Windows_Server_Config_PromoteDC/03A.%20Network_Settings_Initial_IP_Assignment.png)
+  *Opening network adapter settings to begin static IP configuration*
 
-![Disable IE Enhanced Security Configuration](./phase-1-dc-promotion/screenshots/7A_Disable_IE_Enhanced_Security_Configuration.png)
-*Disabling IE Enhanced Security Configuration to ease lab administration*
+  ![Network Settings Switch to Manual IP](./Phase1.Windows_Server_Config_PromoteDC/04A.%20Network_Settings_Switch_to_Manual_IP.png)
+  *Switching from DHCP to manual IP assignment*
 
-![Server Restart Apply Name and IP Changes](./phase-1-dc-promotion/screenshots/8A_Server_Restart_Apply_Name_and_IP_Changes.png)
-*Restarting the server to apply the hostname rename and static IP changes*
+  ![IPv4 Static IP and DNS Configuration](./Phase1.Windows_Server_Config_PromoteDC/05A.%20IPv4_Static_IP_and_DNS_Configuration.png)
+  *Setting static IP 192.168.1.10 with DNS pointed to 127.0.0.1 — the DC will serve as its own DNS resolver after promotion*
 
-![Local Server Properties Final Pre-Promotion Check](./phase-1-dc-promotion/screenshots/9A_Local_Server_Properties_Final_Pre-Promotion_Check.png)
-*Verifying hostname and IP are correct before beginning AD DS role installation*
+  ![Local Server Properties Static IPv4 Confirmed](./Phase1.Windows_Server_Config_PromoteDC/06A.%20Local_Server_Properties_Static_IPv4_Confirmed.png)
+  *Server Manager confirming the static IP is now applied*
 
-### Installing the AD DS role
+  ![Disable IE Enhanced Security Configuration](./Phase1.Windows_Server_Config_PromoteDC/07A.%20Disable_IE_Enhanced_Security_Configuration.png)
+  *Disabling IE Enhanced Security Configuration to ease lab administration*
 
-![Launching Add Roles and Features Wizard](./phase-1-dc-promotion/screenshots/10A_Launching_Add_Roles_and_Features_Wizard.png)
-*Launching the Add Roles and Features Wizard from Server Manager*
+  ![Server Restart Apply Name and IP Changes](./Phase1.Windows_Server_Config_PromoteDC/08A.%20Server_Restart_Apply_Name_and_IP_Changes.png)
+  *Restarting the server to apply the hostname rename and static IP changes*
 
-![ADDS Wizard Before You Begin](./phase-1-dc-promotion/screenshots/11A_ADDS_Wizard_Before_You_Begin.png)
-*Before You Begin screen of the Add Roles and Features Wizard*
+  ![Local Server Properties Final Pre-Promotion Check](./Phase1.Windows_Server_Config_PromoteDC/09A.%20Local_Server_Properties_Final_Pre-Promotion_Check.png)
+  *Verifying hostname and IP are correct before beginning AD DS role installation*
 
-![ADDS Wizard Server Selection DC01](./phase-1-dc-promotion/screenshots/12A_ADDS_Wizard_Server_Selection_DC01.png)
-*Selecting Technocrat-DC01 as the target server*
+  ---
 
-![ADDS Wizard Select Server Role ADDS](./phase-1-dc-promotion/screenshots/13A_ADDS_Wizard_Select_Server_Role_ADDS.png)
-*Checking Active Directory Domain Services from the server roles list*
+  ### Installing the AD DS role
+  *Adding the Active Directory Domain Services binaries to the server through the Add Roles and Features wizard.*
 
-![ADDS Wizard Add Required Management Features](./phase-1-dc-promotion/screenshots/14A_ADDS_Wizard_Add_Required_Management_Features.png)
-*Confirming additional required management features to be installed alongside AD DS*
+  ![Launching Add Roles and Features Wizard](./Phase1.Windows_Server_Config_PromoteDC/10A.%20Launching_Add_Roles_and_Features_Wizard.png)
+  *Launching the Add Roles and Features Wizard from Server Manager*
 
-![ADDS Wizard Select Features](./phase-1-dc-promotion/screenshots/15A_ADDS_Wizard_Select_Features.png)
-*Features screen — leaving defaults and proceeding*
+  ![ADDS Wizard Before You Begin](./Phase1.Windows_Server_Config_PromoteDC/11A.%20ADDS_Wizard_Before_You_Begin.png)
+  *Before You Begin screen of the Add Roles and Features Wizard*
 
-![ADDS Installation Overview Notes](./phase-1-dc-promotion/screenshots/16A_ADDS_Installation_Overview_Notes.png)
-*AD DS overview screen explaining what the role does*
+  ![ADDS Wizard Server Selection DC01](./Phase1.Windows_Server_Config_PromoteDC/12A.%20ADDS_Wizard_Server_Selection_DC01.png)
+  *Selecting Technocrat-DC01 as the target server*
 
-![ADDS Final Review and Install Confirmation](./phase-1-dc-promotion/screenshots/17A_ADDS_Final_Review_and_Install_Confirmation.png)
-*Confirmation screen before beginning the AD DS role installation*
+  ![ADDS Wizard Select Server Role ADDS](./Phase1.Windows_Server_Config_PromoteDC/13A.%20ADDS_Wizard_Select_Server_Role_ADDS.png)
+  *Checking Active Directory Domain Services from the server roles list*
 
-![ADDS Feature Installation Running](./phase-1-dc-promotion/screenshots/18A_ADDS_Feature_Installation_Running.png)
-*AD DS role installation in progress*
+  ![ADDS Wizard Add Required Management Features](./Phase1.Windows_Server_Config_PromoteDC/14A.%20ADDS_Wizard_Add_Required_Management_Features.png)
+  *Confirming additional required management features to be installed alongside AD DS*
 
-![Server Manager ADDS Role Visible](./phase-1-dc-promotion/screenshots/19A_Server_Manager_ADDS_Role_Visible.png)
-*Server Manager showing AD DS role installed — yellow flag prompting DC promotion*
+  ![ADDS Wizard Select Features](./Phase1.Windows_Server_Config_PromoteDC/15A.%20ADDS_Wizard_Select_Features.png)
+  *Features screen — leaving defaults and proceeding*
 
-### Promoting to Domain Controller
+  ![ADDS Installation Overview Notes](./Phase1.Windows_Server_Config_PromoteDC/16A.%20ADDS_Installation_Overview_Notes.png)
+  *AD DS overview screen explaining what the role does*
 
-![Server Manager Promote to Domain Controller](./phase-1-dc-promotion/screenshots/20A_Server_Manager_Promote_to_Domain_Controller.png)
-*Clicking the yellow flag notification to launch the DC Promotion wizard*
+  ![ADDS Final Review and Install Confirmation](./Phase1.Windows_Server_Config_PromoteDC/17A.%20ADDS_Final_Review_and_Install_Confirmation.png)
+  *Confirmation screen before beginning the AD DS role installation*
 
-![ADDS Deployment Add New Forest](./phase-1-dc-promotion/screenshots/21A_ADDS_Deployment_Add_New_Forest.png)
-*Selecting "Add a new forest" and setting the root domain name to technocrat.local*
+  ![ADDS Feature Installation Running](./Phase1.Windows_Server_Config_PromoteDC/18A.%20ADDS_Feature_Installation_Running.png)
+  *AD DS role installation in progress*
 
-![ADDS New Forest Technocrat Local](./phase-1-dc-promotion/screenshots/22A_ADDS_New_Forest_Technocrat_Local.png)
-*Confirming the new forest name technocrat.local*
+  ![Server Manager ADDS Role Visible](./Phase1.Windows_Server_Config_PromoteDC/19A.%20Server_Manager_ADDS_Role_Visible.png)
+  *Server Manager showing AD DS role installed — yellow flag prompting DC promotion*
 
-![ADDS DC Options Functional Levels and DSRM](./phase-1-dc-promotion/screenshots/23A_ADDS_DC_Options_Functional_Levels_and_DSRM.png)
-*Setting forest/domain functional levels and configuring the DSRM recovery password*
+  ---
 
-![ADDS DNS Options Ignore Delegation Warning](./phase-1-dc-promotion/screenshots/24A_ADDS_DNS_Options_Ignore_Delegation_Warning.png)
-*DNS delegation warning — expected for a new private forest, safely ignored*
+  ### Promoting to Domain Controller
+  *Promoting the server to a Domain Controller and creating the 'technocrat.local' forest.*
 
-![ADDS Verify NetBIOS Domain Name TECHNOCRAT](./phase-1-dc-promotion/screenshots/25A_ADDS_Verify_NetBIOS_Domain_Name_TECHNOCRAT.png)
-*NetBIOS name auto-populated as TECHNOCRAT — confirmed and accepted*
+  ![Server Manager Promote to Domain Controller](./Phase1.Windows_Server_Config_PromoteDC/20A.%20Server_Manager_Promote_to_Domain_Controller_Link.png)
+  *Clicking the yellow flag notification to launch the DC Promotion wizard*
 
-![ADDS Paths Database Logs and SYSVOL Default](./phase-1-dc-promotion/screenshots/26A_ADDS_Paths_Database_Logs_and_SYSVOL_Default.png)
-*Leaving default paths for the NTDS database, log files, and SYSVOL*
+  ![ADDS Deployment Add New Forest](./Phase1.Windows_Server_Config_PromoteDC/21A.%20ADDS_Deployment_Add_New_Forest.png)
+  *Selecting "Add a new forest" and setting the root domain name to technocrat.local*
 
-![ADDS Final Validation Before DC Promotion](./phase-1-dc-promotion/screenshots/27A_ADDS_Final_Validation_Before_DC_Promotion.png)
-*Prerequisites check passing — green light to proceed with promotion*
+  ![ADDS New Forest Technocrat Local](./Phase1.Windows_Server_Config_PromoteDC/22A.%20ADDS_New_Forest_Technocrat_Local.png)
+  *Confirming the new forest name technocrat.local*
 
-![ADDS DC Promotion Installation Progress](./phase-1-dc-promotion/screenshots/28A_ADDS_DC_Promotion_Installation_Progress.png)
-*DC promotion running — server will automatically reboot on completion*
+  ![ADDS DC Options Functional Levels and DSRM](./Phase1.Windows_Server_Config_PromoteDC/23A.%20ADDS_DC_Options_Functional_Levels_and_DSRM_Password.png)
+  *Setting forest/domain functional levels and configuring the DSRM recovery password*
 
-### Post-promotion verification
+  ![ADDS DNS Options Ignore Delegation Warning](./Phase1.Windows_Server_Config_PromoteDC/24A.%20ADDS_DNS_Options_Ignore_Delegation_Warning.png)
+  *DNS delegation warning — expected for a new private forest, safely ignored*
 
-![DC01 Initial Domain Administrator Login](./phase-1-dc-promotion/screenshots/29A_DC01_Initial_Domain_Administrator_Login.png)
-*First login after reboot as TECHNOCRAT\Administrator — confirming domain prefix on login screen*
+  ![ADDS Verify NetBIOS Domain Name TECHNOCRAT](./Phase1.Windows_Server_Config_PromoteDC/25A.%20ADDS_Verify_NetBIOS_Domain_Name_TECHNOCRAT.png)
+  *NetBIOS name auto-populated as TECHNOCRAT — confirmed and accepted*
 
-![Server Manager Verify DC01 on Technocrat Local](./phase-1-dc-promotion/screenshots/30A_Server_Manager_Verify_DC01_on_Technocrat_Local.png)
-*Server Manager confirming DC01 is now a domain controller for technocrat.local*
+  ![ADDS Paths Database Logs and SYSVOL Default](./Phase1.Windows_Server_Config_PromoteDC/26A.%20ADDS_Paths_Database_Logs_and_SYSVOL_Defaults.png)
+  *Leaving default paths for the NTDS database, log files, and SYSVOL*
 
-![Verify Active Directory Administrative Tools Installed](./phase-1-dc-promotion/screenshots/31A_Verify_Active_Directory_Administrative_Tools_Installed.png)
-*Confirming Active Directory administrative tools (ADUC, DNS Manager, GPMC) are installed and accessible*
+  ![ADDS Final Validation Before DC Promotion](./Phase1.Windows_Server_Config_PromoteDC/27A.%20ADDS_Final_Validation_Before_DC_Promotion.png)
+  *Prerequisites check passing — green light to proceed with promotion*
+
+  ![ADDS DC Promotion Installation Progress](./Phase1.Windows_Server_Config_PromoteDC/28A.%20ADDS_DC_Promotion_Installation_Progress.png)
+  *DC promotion running — server will automatically reboot on completion*
+
+  ---
+
+  ### Post-promotion verification
+  *Confirming successful domain creation and administrative tool accessibility.*
+
+  ![DC01 Initial Domain Administrator Login](./Phase1.Windows_Server_Config_PromoteDC/29A.%20DC01_Initial_Domain_Administrator_Login.png)
+  *First login after reboot as TECHNOCRAT\Administrator — confirming domain prefix on login screen*
+
+  ![Server Manager Verify DC01 on Technocrat Local](./Phase1.Windows_Server_Config_PromoteDC/30A.%20Server_Manager_Verify_DC01_on_Technocrat_Local.png)
+  *Server Manager confirming DC01 is now a domain controller for technocrat.local*
+
+  ![Verify Active Directory Administrative Tools Installed](./Phase1.Windows_Server_Config_PromoteDC/31A.%20Verify_Active_Directory_Administrative_Tools_Installed.png)
+  *Confirming Active Directory administrative tools (ADUC, DNS Manager, GPMC) are installed and accessible*
+
+</details>
 
 ---
 
