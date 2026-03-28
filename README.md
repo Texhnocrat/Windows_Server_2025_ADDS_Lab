@@ -237,11 +237,6 @@ The lab simulates the kind of infrastructure a help desk technician or junior sy
 - **DNS pointed to loopback** — After promotion, the DC runs its own DNS server. Pointing it to `127.0.0.1` ensures it resolves internal records correctly.
 - **New Forest** — `technocrat.local` was created as a fresh AD forest, establishing the root domain for the entire lab environment.
 
-That is a great catch. Keeping the count in the header makes the documentation feel much more consistent and lets anyone reading it know exactly how deep the "deep dive" goes.
-
-Here is the updated Markdown for Phase 1 with the (31 Screenshots) tag included in the summary header. I also ensured the folder path Phase1.Windows_Server_Config_PromoteDC and the exact filenames from your upload (like 20A. Server_Manager_Promote_to_Domain_Controller_Link.png) are perfectly preserved.
-
-Markdown
 <details>
   <summary><b>Click to expand: Phase 1 - AD DS Installation & DC Promotion (31 Screenshots)</b></summary>
 
