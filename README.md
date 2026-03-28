@@ -1220,4 +1220,4 @@ technocrat.local
 | Documentation | Annotated screenshots, step-by-step walkthroughs, GitHub portfolio |
 
 ---
-This has been an Abel Schuehlein x Technocrat Lab Production. Feel free to follow this lab along and reach out with any critiques!
+This has been an Abel Schuehlein x Technocrat Lab Production. Feel free to follow this lab along and/or reach out with any critiques!
