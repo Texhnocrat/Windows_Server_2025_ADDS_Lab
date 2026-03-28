@@ -376,162 +376,182 @@ technocrat.local
     └── Lab-Users
 ```
 
-### Opening ADUC & creating the OU structure
+<details>
+  <summary><b>Click to expand: Phase 2 - OU Structure, User Import & Group Nesting (48 Screenshots)</b></summary>
 
-![ADUC Initial Launch Technocrat Local](./phase-2-users-ous-groups/screenshots/1B_ADUC_Initial_Launch_Technocrat_Local.png)
-*Active Directory Users and Computers opening view showing the technocrat.local domain*
+  ### Opening ADUC & creating the OU structure
+  *Establishing a logical hierarchy within Active Directory to organize users, computers, and groups by department.*
 
-![ADUC Domain New Organizational Unit Menu](./phase-2-users-ous-groups/screenshots/2B_ADUC_Domain_New_Organizational_Unit_Menu.png)
-*Right-clicking the domain to create a new top-level Organizational Unit*
+  ![ADUC Initial Launch Technocrat Local](./Phase2.OUs_Users_Groups/01B.%20ADUC_Initial_Launch_Technocrat_Loca.png)
+  *Active Directory Users and Computers opening view showing the technocrat.local domain*
 
-![ADUC New Object Organizational Unit Dialog](./phase-2-users-ous-groups/screenshots/3B_ADUC_New_Object_Organizational_Unit_Dialog.png)
-*New Object dialog for creating an Organizational Unit*
+  ![ADUC Domain New Organizational Unit Menu](./Phase2.OUs_Users_Groups/02B.%20ADUC_Domain_New_Organizational_Unit_Menu.png)
+  *Right-clicking the domain to create a new top-level Organizational Unit*
 
-![ADUC Create Top Level Technocrat OU](./phase-2-users-ous-groups/screenshots/4B_ADUC_Create_Top_Level_Technocrat_OU.png)
-*Creating the top-level Technocrat OU that will contain all department OUs*
+  ![ADUC New Object Organizational Unit Dialog](./Phase2.OUs_Users_Groups/03B.%20ADUC_New_Object_Organizational_Unit_Dialog.png)
+  *New Object dialog for creating an Organizational Unit*
 
-![Nesting Department OUs Inside Technocrat OU](./phase-2-users-ous-groups/screenshots/5B_Nesting_Department_OUs_Inside_Technocrat_OU.png)
-*Creating department OUs nested inside the Technocrat OU*
+  ![ADUC Create Top Level Technocrat OU](./Phase2.OUs_Users_Groups/04B.%20ADUC_Create_Top_Level_Technocrat_OU.png)
+  *Creating the top-level Technocrat OU that will contain all department OUs*
 
-![ADUC Technocrat Nested OU Structure Complete](./phase-2-users-ous-groups/screenshots/6B_ADUC_Technocrat_Nested_OU_Structure_Complete.png)
-*Completed OU structure showing IT, HR, Sales, Disabled Accounts, and Lab-Users nested under Technocrat*
+  ![Nesting Department OUs Inside Technocrat OU](./Phase2.OUs_Users_Groups/05B.%20Nesting_Departmental_OUs_Inside_Technocrat.png)
+  *Creating department OUs nested inside the Technocrat OU*
 
-### Bulk user import
+  ![ADUC Technocrat Nested OU Structure Complete](./Phase2.OUs_Users_Groups/06B.%20ADUC_Technocrat_Nested_OU_Structure_Complete.png)
+  *Completed OU structure showing IT, HR, Sales, Disabled Accounts, and Lab-Users nested under Technocrat*
 
-![ADUC Organizing Bulk Users to Department OUs](./phase-2-users-ous-groups/screenshots/7B_ADUC_Organizing_Bulk_Users_to_Department_OUs.png)
-*Moving bulk-imported users from Lab-Users into their respective department OUs*
+  ---
 
-![ADUC Bulk Move Users to IT OU](./phase-2-users-ous-groups/screenshots/8B_ADUC_Bulk_Move_Users_to_IT_OU.png)
-*Bulk-selecting and moving users into the IT OU*
+  ### Bulk user import
+  *Moving bulk-imported accounts into their respective department OUs to reflect the corporate structure.*
 
-![ADUC Move Objects Warning Confirmation](./phase-2-users-ous-groups/screenshots/9B_ADUC_Move_Objects_Warning_Confirmation.png)
-*Confirming the move operation warning dialog*
+  ![ADUC Organizing Bulk Users to Department OUs](./Phase2.OUs_Users_Groups/07B.%20ADUC_Organizing_Bulk_Users_to_Department_OUs.png)
+  *Moving bulk-imported users from Lab-Users into their respective department OUs*
 
-![ADUC Final Technocrat OU Structure Expanded](./phase-2-users-ous-groups/screenshots/10B_ADUC_Final_Technocrat_OU_Structure_Expanded.png)
-*Final expanded OU tree showing users distributed across all department OUs*
+  ![ADUC Bulk Move Users to IT OU](./Phase2.OUs_Users_Groups/08B.%20ADUC_Bulk_Move_Users_to_IT_OU.png)
+  *Bulk-selecting and moving users into the IT OU*
 
-![ADUC Disabled Accounts OU Populated](./phase-2-users-ous-groups/screenshots/11B_ADUC_Disabled_Accounts_OU_Populated.png)
-*Disabled Accounts OU populated — ready to receive deactivated user accounts*
+  ![ADUC Move Objects Warning Confirmation](./Phase2.OUs_Users_Groups/09B.%20ADUC_Move_Objects_Warning_Confirmatio.png)
+  *Confirming the move operation warning dialog*
 
-![ADUC HR OU Users List](./phase-2-users-ous-groups/screenshots/12B_ADUC_HR_OU_Users_List.png)
-*HR OU showing its assigned user accounts*
+  ![ADUC Final Technocrat OU Structure Expanded](./Phase2.OUs_Users_Groups/10B.%20ADUC_Final_Technocrat_OU_Structure_Expanded.png)
+  *Final expanded OU tree showing users distributed across all department OUs*
 
-![ADUC IT OU Users List](./phase-2-users-ous-groups/screenshots/13B_ADUC_IT_OU_Users_List.png)
-*IT OU showing its assigned user accounts*
+  ![ADUC Disabled Accounts OU Populated](./Phase2.OUs_Users_Groups/11B.%20ADUC_Disabled_Accounts_OU_Populated.png)
+  *Disabled Accounts OU populated — ready to receive deactivated user accounts*
 
-![ADUC Sales OU Users List](./phase-2-users-ous-groups/screenshots/14B_ADUC_Sales_OU_Users_List.png)
-*Sales OU showing its assigned user accounts*
+  ![ADUC HR OU Users List](./Phase2.OUs_Users_Groups/12B.%20ADUC_HR_OU_Users_List.png)
+  *HR OU showing its assigned user accounts*
 
-![ADUC Accounting OU Users List](./phase-2-users-ous-groups/screenshots/15B_ADUC_Accounting_OU_Users_List.png)
-*Accounting OU showing its assigned user accounts*
+  ![ADUC IT OU Users List](./Phase2.OUs_Users_Groups/13B.%20ADUC_IT_OU_Users_List.png)
+  *IT OU showing its assigned user accounts*
 
-![ADUC Marketing OU Users List](./phase-2-users-ous-groups/screenshots/16B_ADUC_Marketing_OU_Users_List.png)
-*Marketing OU showing its assigned user accounts*
+  ![ADUC Sales OU Users List](./Phase2.OUs_Users_Groups/14B.%20ADUC_Sales_OU_Users_List.png)
+  *Sales OU showing its assigned user accounts*
 
-### Creating a new user manually
+  ![ADUC Accounting OU Users List](./Phase2.OUs_Users_Groups/15B.%20ADUC_Accounting_OU_Users_List.png)
+  *Accounting OU showing its assigned user accounts*
 
-![ADUC IT OU New Object Name Menu](./phase-2-users-ous-groups/screenshots/17B_ADUC_IT_OU_New_Object_Name_Menu.png)
-*Right-clicking the IT OU to manually create a new user object*
+  ![ADUC Marketing OU Users List](./Phase2.OUs_Users_Groups/16B.%20ADUC_Marketing_OU_Users_List.png)
+  *Marketing OU showing its assigned user accounts*
 
-![ADUC New User Initial Password Logon Details](./phase-2-users-ous-groups/screenshots/18B_ADUC_New_User_Initial_Password_Logon_Details.png)
-*Setting the initial password and logon options for the new user*
+  ---
 
-![ADUC New User Object Name and Security Setup](./phase-2-users-ous-groups/screenshots/19B_ADUC_New_User_Object_Name_and_Security_Setup.png)
-*Entering the new user's name and security settings*
+  ### Creating a new user manually
+  *Demonstrating the manual creation of a user object, including credential setup and property verification.*
 
-![ADUC New User Summary Confirmation Abel](./phase-2-users-ous-groups/screenshots/20B_ADUC_New_User_Summary_Confirmation_Abel.png)
-*Summary confirmation screen before finalizing the new user account*
+  ![ADUC IT OU New Object Name Menu](./Phase2.OUs_Users_Groups/17B.%20ADUC_IT_OU_New_User_Creation_Menu.png)
+  *Right-clicking the IT OU to manually create a new user object*
 
-![ADUC User Properties Abel Scheheelein](./phase-2-users-ous-groups/screenshots/21B_ADUC_User_Properties_Abel_Scheheelein.png)
-*User properties for Abel Scheheelein showing account details*
+  ![ADUC New User Initial Password Logon Details](./Phase2.OUs_Users_Groups/18B.%20ADUC_New_User_Object_Name_and_Logon_Details.png)
+  *Setting the initial password and logon options for the new user*
 
-![ADUC User Properties Default Group Members](./phase-2-users-ous-groups/screenshots/22B_ADUC_User_Properties_Default_Group_Members.png)
-*Member Of tab showing Abel's default group membership (Domain Users)*
+  ![ADUC New User Object Name and Security Setup](./Phase2.OUs_Users_Groups/19B.%20ADUC_New_User_Initial_Password_Security_Setup.png)
+  *Entering the new user's name and security settings*
 
-### Creating security groups
+  ![ADUC New User Summary Confirmation Abel](./Phase2.OUs_Users_Groups/20B.%20ADUC_New_User_Summary_Confirmation_Abel_Schuehlein.png)
+  *Summary confirmation screen before finalizing the new user account*
 
-![Creating First Security Group Members](./phase-2-users-ous-groups/screenshots/23B_Creating_First_Security_Group_Members.png)
-*Creating the first security group and adding initial members*
+  ![ADUC User Properties Abel Scheheelein](./Phase2.OUs_Users_Groups/21B.%20ADUC_User_Properties_Abel_Schuehlein.png)
+  *User properties for Abel Schuehlein showing account details*
 
-![ADUC Create Security Group IT Admins](./phase-2-users-ous-groups/screenshots/24B_ADUC_Create_Security_Group_IT_Admins.png)
-*Creating the IT-Admins security group*
+  ![ADUC User Properties Default Group Members](./Phase2.OUs_Users_Groups/22B.%20ADUC_User_Properties_Default_Group_Membership.png)
+  *Member Of tab showing Abel's default group membership (Domain Users)*
 
-![ADUC IT OU Security Group Created Verification](./phase-2-users-ous-groups/screenshots/25B_ADUC_IT_OU_Security_Group_Created_Verification.png)
-*Verifying the IT-Admins group appears in the IT OU*
+  ---
 
-![ADUC Create Groups OU](./phase-2-users-ous-groups/screenshots/26B_ADUC_Create_Groups_OU.png)
-*Creating a dedicated Groups OU to organize all security groups*
+  ### Creating security groups
+  *Implementing a centralized group management strategy to streamline access control.*
 
-![Centralizing Domain Security Groups Creation](./phase-2-users-ous-groups/screenshots/27B_Centralizing_Domain_Security_Groups_Creation.png)
-*Centralizing all security groups into the Groups OU for clean AD organization*
+  ![Creating First Security Group Members](./Phase2.OUs_Users_Groups/23B.%20Creating_First_Group.png)
+  *Creating the first security group and adding initial members*
 
-![ADUC Create Security Group VPN User](./phase-2-users-ous-groups/screenshots/28B_ADUC_Create_Security_Group_VPN_User.png)
-*Creating the VPN-Users security group*
+  ![ADUC Create Security Group IT Admins](./Phase2.OUs_Users_Groups/24B.%20ADUC_Create_Security_Group_IT-Admins.png)
+  *Creating the IT-Admins security group*
 
-![ADUC Groups OU VPN Users](./phase-2-users-ous-groups/screenshots/29B_ADUC_Groups_OU_VPN_Users.png)
-*Groups OU showing VPN-Users group created*
+  ![ADUC IT OU Security Group Created Verification](./Phase2.OUs_Users_Groups/25B.%20ADUC_IT_OU_Security_Group_Created_Verification.png)
+  *Verifying the IT-Admins group appears in the IT OU*
 
-### Assigning users to groups
+  ![ADUC Create Groups OU](./Phase2.OUs_Users_Groups/26B.%20ADUC_Create_Groups_OU.png)
+  *Creating a dedicated Groups OU to organize all security groups*
 
-![ADUC User Properties Member Tab Abel](./phase-2-users-ous-groups/screenshots/30B_ADUC_User_Properties_Member_Tab_Abel.png)
-*Opening Abel's Member Of tab to assign group memberships*
+  ![Centralizing Domain Security Groups Creation](./Phase2.OUs_Users_Groups/27B.%20Centralizing_Domain_Security_Groups_Creation.png)
+  *Centralizing all security groups into the Groups OU for clean AD organization*
 
-![ADUC Add User to IT Admins](./phase-2-users-ous-groups/screenshots/31B_ADUC_Add_User_to_IT-Admins.png)
-*Adding Abel to the IT-Admins security group*
+  ![ADUC Create Security Group VPN User](./Phase2.OUs_Users_Groups/28B.%20ADUC_Create_Security_Group_VPN-User.png)
+  *Creating the VPN-Users security group*
 
-![ADUC Abel Assigned to IT Admins Security Group](./phase-2-users-ous-groups/screenshots/32B_ADUC_Abel_Assigned_to_IT-Admins_Security_Group.png)
-*Member Of tab confirming Abel is now a member of IT-Admins*
+  ![ADUC Groups OU VPN Users](./Phase2.OUs_Users_Groups/29B.%20ADUC_Groups_OU_VPN-Users.png)
+  *Groups OU showing VPN-Users group created*
 
-![ADUC Assigning Abel and Jason to IT Admins](./phase-2-users-ous-groups/screenshots/33B_ADUC_Assigning_Abel_and_Jason_to_IT-Admins.png)
-*Adding both Abel and Jason to the IT-Admins group*
+  ---
 
-![ADUC Groups OU Complete Security Group List](./phase-2-users-ous-groups/screenshots/34B_ADUC_Groups_OU_Complete_Security_Group_List.png)
-*Groups OU showing all security groups created for the domain*
+  ### Assigning users to groups
+  *Applying the principle of AGDLP (Accounts, Global, Domain Local, Permissions) through group nesting.*
 
-![ADUC Create Domain Local Group DL VPN Access](./phase-2-users-ous-groups/screenshots/35B_ADUC_Create_Domain_Local_Group_DL-VPN-Access.png)
-*Creating a Domain Local group DL-VPN-Access for role-based access control*
+  ![ADUC User Properties Member Tab Abel](./Phase2.OUs_Users_Groups/30B.%20ADUC_User_Properties_Member_Of_Tab_Abel_Schuehlein.png)
+  *Opening Abel's Member Of tab to assign group memberships*
 
-![ADUC Nesting VPN Users into DL VPN Access](./phase-2-users-ous-groups/screenshots/36B_ADUC_Nesting_VPN-Users_into_DL-VPN-Access.png)
-*Nesting the VPN-Users global group inside the DL-VPN-Access domain local group*
+  ![ADUC Add User to IT Admins](./Phase2.OUs_Users_Groups/31B.%20ADUC_Add_User_to_IT-Admins_Security_Group.png)
+  *Adding Abel to the IT-Admins security group*
 
-![ADUC Verify Group Nesting VPN Users in DL VPN](./phase-2-users-ous-groups/screenshots/37B_ADUC_Verify_Group_Nesting_VPN-Users_in_DL-VPN.png)
-*Verifying the group nesting is correctly configured*
+  ![ADUC Abel Assigned to IT Admins Security Group](./Phase2.OUs_Users_Groups/32B.%20ADUC_Abel_Schuehlein_Assigned_to_IT-Admins.png)
+  *Member Of tab confirming Abel is now a member of IT-Admins*
 
-![ADUC Assigning IT Department Users to VPN Users](./phase-2-users-ous-groups/screenshots/38B_ADUC_Assigning_IT_Department_Users_to_VPN-Users.png)
-*Assigning IT department users to the VPN-Users group*
+  ![ADUC Assigning Abel and Jason to IT Admins](./Phase2.OUs_Users_Groups/33B.%20ADUC_Assigning_Abel_and_Jason_to_IT-Admins.png)
+  *Adding both Abel and Jason to the IT-Admins group*
 
-![ADUC Deactivating User Account Steven Allen](./phase-2-users-ous-groups/screenshots/39B_ADUC_Deactivating_User_Account_Steven_Allen.png)
-*Deactivating Steven Allen's account and moving it to the Disabled Accounts OU*
+  ![ADUC Groups OU Complete Security Group List](./Phase2.OUs_Users_Groups/34B.%20ADUC_Groups_OU_Complete_Security_Group_List.png)
+  *Groups OU showing all security groups created for the domain*
 
-### Group properties & delegation
+  ![ADUC Create Domain Local Group DL VPN Access](./Phase2.OUs_Users_Groups/35B.%20ADUC_Create_Domain_Local_Group_DL-VPN-Access.png)
+  *Creating a Domain Local group DL-VPN-Access for role-based access control*
 
-![ADUC Group Properties Assign Managed By](./phase-2-users-ous-groups/screenshots/40B_ADUC_Group_Properties_Assign_Managed_By.png)
-*Setting the Managed By attribute on a security group*
+  ![ADUC Nesting VPN Users into DL VPN Access](./Phase2.OUs_Users_Groups/36B.%20ADUC_Nesting_VPN-Users_into_DL-VPN-Access.png)
+  *Nesting the VPN-Users global group inside the DL-VPN-Access domain local group*
 
-![ADUC Delegate Group Membership Update](./phase-2-users-ous-groups/screenshots/41B_ADUC_Delegate_Group_Membership_Update.png)
-*Delegating group membership management to a specific user*
+  ![ADUC Verify Group Nesting VPN Users in DL VPN](./Phase2.OUs_Users_Groups/37B.%20ADUC_Verify_Group_Nesting_VPN-Users_in_DL-VPN-Access.png)
+  *Verifying the group nesting is correctly configured*
 
-![ADUC Rename Group Prefix GS IT Admins](./phase-2-users-ous-groups/screenshots/42B_ADUC_Rename_Group_Prefix_GS_IT-Admins.png)
-*Renaming group with GS prefix to follow naming conventions*
+  ![ADUC Assigning IT Department Users to VPN Users](./Phase2.OUs_Users_Groups/38B.%20ADUC_Assigning_IT_Department_Users_to_VPN-Users.png)
+  *Assigning IT department users to the VPN-Users group*
 
-![ADUC Rename Group Prefix GS VPN Users](./phase-2-users-ous-groups/screenshots/43B_ADUC_Rename_Group_Prefix_GS_VPN-Users.png)
-*Renaming VPN-Users group with GS prefix*
+  ![ADUC Deactivating User Account Steven Allen](./Phase2.OUs_Users_Groups/39B.%20ADUC_Deactivating_User_Account_Steven_Allen.png)
+  *Deactivating Steven Allen's account and moving it to the Disabled Accounts OU*
 
-![ADUC Rename Group Prefix DL VPN Access](./phase-2-users-ous-groups/screenshots/44B_ADUC_Rename_Group_Prefix_DL-VPN-Access.png)
-*Renaming domain local group with DL prefix following naming conventions*
+  ---
 
-![ADUC Sales OU Delegate Control Wizard Launch](./phase-2-users-ous-groups/screenshots/45B_ADUC_Sales_OU_Delegate_Control_Wizard_Launch.png)
-*Launching the Delegation of Control Wizard on the Sales OU*
+  ### Group properties & delegation
+  *Configuring administrative ownership and delegating specific OU controls to departmental admin groups.*
 
-![Delegation Wizard Select GS IT Admins Group](./phase-2-users-ous-groups/screenshots/46B_Delegation_Wizard_Select_GS_IT-Admins_Group.png)
-*Selecting the GS-IT-Admins group to delegate control to*
+  ![ADUC Group Properties Assign Managed By](./Phase2.OUs_Users_Groups/40B.%20ADUC_Group_Properties_Assign_Managed_By_Abel_Schuehlein.png)
+  *Setting the Managed By attribute on a security group*
 
-![Delegation Wizard Selecting Common Administrative Tasks](./phase-2-users-ous-groups/screenshots/47B_Delegation_Wizard_Selecting_Common_Administrative_Tasks.png)
-*Selecting which administrative tasks to delegate to IT-Admins*
+  ![ADUC Delegate Group Membership Update](./Phase2.OUs_Users_Groups/41B.%20ADUC_Delegate_Group_Membership_Update_to_Manager.png)
+  *Delegating group membership management to a specific user*
 
-![Delegation Wizard Summary and Completion](./phase-2-users-ous-groups/screenshots/48B_Delegation_Wizard_Summary_and_Completion.png)
-*Delegation of Control Wizard summary confirming delegation is complete*
+  ![ADUC Rename Group Prefix GS IT Admins](./Phase2.OUs_Users_Groups/42B.%20ADUC_Rename_Group_Prefix_GS_IT_Admins.png)
+  *Renaming group with GS prefix to follow naming conventions*
 
+  ![ADUC Rename Group Prefix GS VPN Users](./Phase2.OUs_Users_Groups/43B.%20ADUC_Rename_Group_Prefix_GS_VPN_Users.png)
+  *Renaming VPN-Users group with GS prefix*
+
+  ![ADUC Rename Group Prefix DL VPN Access](./Phase2.OUs_Users_Groups/44B.%20ADUC_Rename_Group_Prefix_DL_VPN_Access.png)
+  *Renaming domain local group with DL prefix following naming conventions*
+
+  ![ADUC Sales OU Delegate Control Wizard Launch](./Phase2.OUs_Users_Groups/45B.%20ADUC_Sales_OU_Delegate_Control_Wizard_Launch.png)
+  *Launching the Delegation of Control Wizard on the Sales OU*
+
+  ![Delegation Wizard Select GS IT Admins Group](./Phase2.OUs_Users_Groups/46B.%20Delegation_Wizard_Select_GS_IT_Admins_Group.png)
+  *Selecting the GS-IT-Admins group to delegate control to*
+
+  ![Delegation Wizard Selecting Common Administrative Tasks](./Phase2.OUs_Users_Groups/47B.%20Delegation_Wizard_Selecting_Common_Administrative_Tasks.png)
+  *Selecting which administrative tasks to delegate to IT-Admins*
+
+  ![Delegation Wizard Summary and Completion](./Phase2.OUs_Users_Groups/48B.%20Delegation_Wizard_Summary_and_Completion.png)
+  *Delegation of Control Wizard summary confirming delegation is complete*
+
+</details>
 ---
 
 ## Phase 3 — Group Policy Objects
