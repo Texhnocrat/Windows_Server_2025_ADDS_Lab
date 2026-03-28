@@ -846,214 +846,238 @@ technocrat.local
 - **DHCP Scope** — Defined an IP range for the lab subnet, with the DC set as the DNS server option so joined clients automatically use the correct resolver.
 - **NTFS vs Share Permissions** — Both layers were configured intentionally. Share permissions control network access; NTFS permissions control what authenticated users can do with the files themselves.
 
-### DNS configuration
+<details>
+  <summary><b>Click to expand: Phase 5 - DNS, DHCP & Shared Folders (65 Screenshots)</b></summary>
 
-![Server Manager Tools Select DNS](./phase-5-dns-dhcp-shared-folders/screenshots/1E_Server_Manager_Tools_Select_DNS.png)
-*Opening DNS Manager from the Server Manager Tools menu*
+  ### DNS configuration
+  *Configuring the domain's DNS infrastructure and adding host records to the forward lookup zone.*
 
-![DNS Manager Server Node Overview](./phase-5-dns-dhcp-shared-folders/screenshots/2E_DNS_Manager_Server_Node_Overview.png)
-*DNS Manager opening view showing Technocrat-DC01 as the DNS server*
+  ![Server Manager Tools Select DNS](./Phase5.DNS_DHCP_Shared_Folders/01E.Server_Manager_Tools_Select_DNS.png)
+  *Opening DNS Manager from the Server Manager Tools menu*
 
-![Expand DC01 DNS Server Nodes](./phase-5-dns-dhcp-shared-folders/screenshots/3E_Expand_DC01_DNS_Server_Nodes.png)
-*Expanding the DC01 node to view Forward and Reverse Lookup Zones*
+  ![DNS Manager Server Node Overview](./Phase5.DNS_DHCP_Shared_Folders/02E.DNS_Manager_Server_Node_Overview.png)
+  *DNS Manager opening view showing Technocrat-DC01 as the DNS server*
 
-![Forward Lookup Zones Directory Structure](./phase-5-dns-dhcp-shared-folders/screenshots/4E_Forward_Lookup_Zones_Directory_Structure.png)
-*Forward Lookup Zones showing the technocrat.local zone already created during DC promotion*
+  ![Expand DC01 DNS Server Nodes](./Phase5.DNS_DHCP_Shared_Folders/03E.Expand_DC01_DNS_Server_Nodes.png)
+  *Expanding the DC01 node to view Forward and Reverse Lookup Zones*
 
-![Right Click Domain Select New Host](./phase-5-dns-dhcp-shared-folders/screenshots/5E_Right_Click_Domain_Select_New_Host.png)
-*Right-clicking the technocrat.local zone to add a new A record*
+  ![Forward Lookup Zones Directory Structure](./Phase5.DNS_DHCP_Shared_Folders/04E.Forward_Lookup_Zones_Directory_Structure.png)
+  *Forward Lookup Zones showing the technocrat.local zone already created during DC promotion*
 
-![Create New Host Record Fileserver](./phase-5-dns-dhcp-shared-folders/screenshots/6E_Create_New_Host_Record_Fileserver.png)
-*Creating a new A record for fileserver.technocrat.local*
+  ![Right Click Domain Select New Host](./Phase5.DNS_DHCP_Shared_Folders/05E.Right_Click_Domain_Select_New_Host.png)
+  *Right-clicking the technocrat.local zone to add a new A record*
 
-![Fileserver Host A Record Success Confirmation](./phase-5-dns-dhcp-shared-folders/screenshots/7E_Fileserver_Host_A_Record_Success_Confirmation.png)
-*Confirmation that the fileserver A record was created successfully*
+  ![Create New Host Record Fileserver A Record](./Phase5.DNS_DHCP_Shared_Folders/06E.Create_New_Host_Record_Fileserver_A_Record.png)
+  *Creating a new A record for fileserver.technocrat.local*
 
-![Verify Fileserver A Record in DNS Manager](./phase-5-dns-dhcp-shared-folders/screenshots/8E_Verify_Fileserver_A_Record_In_DNS_Manager.png)
-*DNS Manager showing the new fileserver.technocrat.local A record in the zone*
+  ![Fileserver Host A Record Success Confirmation](./Phase5.DNS_DHCP_Shared_Folders/07E.Fileserver_Host_A_Record_Success_Confirmation.png)
+  *Confirmation that the fileserver A record was created successfully*
 
-### Installing DHCP
+  ![Verify Fileserver A Record In DNS Manager](./Phase5.DNS_DHCP_Shared_Folders/08E.Verify_Fileserver_A_Record_In_DNS_Manager.png)
+  *DNS Manager showing the new fileserver.technocrat.local A record in the zone*
 
-![Server Manager Add Roles Features](./phase-5-dns-dhcp-shared-folders/screenshots/9E_Server_Manager_Select_Add_Roles_Features.png)
-*Launching Add Roles and Features to install the DHCP Server role*
+  ---
 
-![Select Role Based Or Feature Based Installation](./phase-5-dns-dhcp-shared-folders/screenshots/10E_Select_Role_Based_Or_Feature_Based_Installation.png)
-*Selecting Role-based installation in the Add Roles wizard*
+  ### Installing DHCP
+  *Adding the DHCP Server role and authorizing it within the Active Directory domain.*
 
-![Select DC01 From Destination Server Pool](./phase-5-dns-dhcp-shared-folders/screenshots/11E_Select_DC01_From_Destination_Server_Pool.png)
-*Selecting Technocrat-DC01 as the destination server*
+  ![Server Manager Select Add Roles Features](./Phase5.DNS_DHCP_Shared_Folders/09E.Server_Manager_Select_Add_Roles_Features.png)
+  *Launching Add Roles and Features to install the DHCP Server role*
 
-![Select DHCP Server Role Installation](./phase-5-dns-dhcp-shared-folders/screenshots/12E_Select_DHCP_Server_Role_Installation.png)
-*Checking the DHCP Server role from the server roles list*
+  ![Select Role Based Or Feature Based Installation](./Phase5.DNS_DHCP_Shared_Folders/10E.Select_Role_Based_Or_Feature_Based_Installation.png)
+  *Selecting Role-based installation in the Add Roles wizard*
 
-![Add Required DHCP Management Tools](./phase-5-dns-dhcp-shared-folders/screenshots/13E_Add_Required_DHCP_Management_Tools.png)
-*Confirming required DHCP management tools to be installed alongside the role*
+  ![Select DC01 From Destination Server Pool](./Phase5.DNS_DHCP_Shared_Folders/11E.Select_DC01_From_Destination_Server_Pool.png)
+  *Selecting Technocrat-DC01 as the destination server*
 
-![Select Features RSAT DHCP Tools](./phase-5-dns-dhcp-shared-folders/screenshots/14E_Select_Features_RSAT_DHCP_Tools.png)
-*Selecting RSAT DHCP Tools for remote management capability*
+  ![Select DHCP Server Role Installation](./Phase5.DNS_DHCP_Shared_Folders/12E.Select_DHCP_Server_Role_Installation.png)
+  *Checking the DHCP Server role from the server roles list*
 
-![Confirm DHCP Server Installation Selections](./phase-5-dns-dhcp-shared-folders/screenshots/15E_Confirm_DHCP_Server_Installation_Selections.png)
-*Confirmation screen before installing the DHCP Server role*
+  ![Add Required DHCP Management Tools](./Phase5.DNS_DHCP_Shared_Folders/13E.Add_Required_DHCP_Management_Tools.png)
+  *Confirming required DHCP management tools to be installed alongside the role*
 
-![DHCP Server Installation Progress DC01](./phase-5-dns-dhcp-shared-folders/screenshots/16E_DHCP_Server_Installation_Progress_DC01.png)
-*DHCP Server role installation in progress*
+  ![Select Features RSAT DHCP Tools](./Phase5.DNS_DHCP_Shared_Folders/14E.Select_Features_RSAT_DHCP_Tools.png)
+  *Selecting RSAT DHCP Tools for remote management capability*
 
-![Complete DHCP Post Deployment Configuration Wizard](./phase-5-dns-dhcp-shared-folders/screenshots/17E_Complete_DHCP_Post_Deployment_Configuration_Wizard.png)
-*Launching the DHCP post-install configuration wizard from the yellow flag notification*
+  ![Confirm DHCP Server Installation Selections](./Phase5.DNS_DHCP_Shared_Folders/15E.Confirm_DHCP_Server_Installation_Selections.png)
+  *Confirmation screen before installing the DHCP Server role*
 
-![DHCP Server Post Install Authorization Credentials](./phase-5-dns-dhcp-shared-folders/screenshots/18E_DHCP_Server_Post_Install_Authorization_Credentials.png)
-*Authorizing the DHCP server in Active Directory using domain admin credentials*
+  ![DHCP Server Installation Progress DC01](./Phase5.DNS_DHCP_Shared_Folders/16E.DHCP_Server_Installation_Progress_DC01.png)
+  *DHCP Server role installation in progress*
 
-![DHCP AD DS Authorization Confirmation Success](./phase-5-dns-dhcp-shared-folders/screenshots/19E_DHCP_AD_DS_Authorization_Confirmation_Success.png)
-*DHCP server successfully authorized in Active Directory*
+  ![Complete DHCP Post Deployment Configuration](./Phase5.DNS_DHCP_Shared_Folders/17E.Complete_DHCP_Post_Deployment_Configuration.png)
+  *Launching the DHCP post-install configuration wizard from the yellow flag notification*
 
-![DHCP Post Install Configuration Success](./phase-5-dns-dhcp-shared-folders/screenshots/20E_DHCP_Post_Install_Configuration_Success.png)
-*Post-install configuration complete — DHCP server is active and authorized*
+  ![DHCP Server Post Install Authorization Wizard](./Phase5.DNS_DHCP_Shared_Folders/18E.DHCP_Server_Post_Install_Authorization_Wizard.png)
+  *DHCP post-install authorization wizard — confirming the server will be authorized in AD*
 
-### Configuring DHCP scope
+  ![DHCP AD DS Authorization Credentials](./Phase5.DNS_DHCP_Shared_Folders/19E.DHCP_AD_DS_Authorization_Credentials.png)
+  *Authorizing the DHCP server in Active Directory using domain admin credentials*
 
-![Search And Launch DHCP Management Console](./phase-5-dns-dhcp-shared-folders/screenshots/21E_Search_And_Launch_DHCP_Management_Console.png)
-*Opening the DHCP Management Console*
+  ![DHCP Post Install Configuration Summary Success](./Phase5.DNS_DHCP_Shared_Folders/20E.DHCP_Post_Install_Configuration_Summary_Success.png)
+  *Post-install configuration complete — DHCP server is active and authorized*
 
-![DHCP Management Console DC01 Node](./phase-5-dns-dhcp-shared-folders/screenshots/22E_DHCP_Management_Console_DC01_Node.png)
-*DHCP console showing DC01 as the authorized DHCP server*
+  ---
 
-![Expand IPv4 Scope Management](./phase-5-dns-dhcp-shared-folders/screenshots/23E_Expand_IPv4_Scope_Management.png)
-*Expanding the IPv4 node to begin scope creation*
+  ### Configuring DHCP scope
+  *Creating and activating an IP address scope to automatically assign addresses to domain clients.*
 
-![Right Click New Scope Wizard](./phase-5-dns-dhcp-shared-folders/screenshots/24E_Right_Click_New_Scope_Wizard.png)
-*Right-clicking IPv4 to launch the New Scope Wizard*
+  ![Search And Launch DHCP Management Console](./Phase5.DNS_DHCP_Shared_Folders/21E.Search_And_Launch_DHCP_Management_Console.png)
+  *Opening the DHCP Management Console*
 
-![Welcome To New Scope Wizard](./phase-5-dns-dhcp-shared-folders/screenshots/25E_Welcome_To_New_Scope_Wizard.png)
-*New Scope Wizard welcome screen*
+  ![DHCP Management Console DC01 Node](./Phase5.DNS_DHCP_Shared_Folders/22E.DHCP_Management_Console_DC01_Node.png)
+  *DHCP console showing DC01 as the authorized DHCP server*
 
-![Set DHCP Scope Name Technocrat Clients](./phase-5-dns-dhcp-shared-folders/screenshots/26E_Set_DHCP_Scope_Name_Technocrat_Clients.png)
-*Naming the DHCP scope "Technocrat_Clients"*
+  ![Expand IPv4 Scope Management](./Phase5.DNS_DHCP_Shared_Folders/23E.Expand_IPv4_Scope_Management.png)
+  *Expanding the IPv4 node to begin scope creation*
 
-![Configure DHCP Scope IP Address Range](./phase-5-dns-dhcp-shared-folders/screenshots/27E_Configure_DHCP_Scope_IP_Address_Range.png)
-*Setting the IP address range for the DHCP scope*
+  ![Right Click IPv4 Select New Scope](./Phase5.DNS_DHCP_Shared_Folders/24E.Right_Click_IPv4_Select_New_Scope.png)
+  *Right-clicking IPv4 to launch the New Scope Wizard*
 
-![Skip DHCP Exclusions And Delays](./phase-5-dns-dhcp-shared-folders/screenshots/28E_Skip_DHCP_Exclusions_And_Delays.png)
-*Skipping exclusions — no IPs need to be reserved from the scope at this stage*
+  ![Welcome To New Scope Wizard](./Phase5.DNS_DHCP_Shared_Folders/25E.Welcome_To_New_Scope_Wizard.png)
+  *New Scope Wizard welcome screen*
 
-![Set DHCP Scope Lease Duration 8 Days](./phase-5-dns-dhcp-shared-folders/screenshots/29E_Set_DHCP_Scope_Lease_Duration_8_Days.png)
-*Setting the DHCP lease duration to 8 days*
+  ![Set DHCP Scope Name Technocrat Clients](./Phase5.DNS_DHCP_Shared_Folders/26E.Set_DHCP_Scope_Name_Technocrat_Clients.png)
+  *Naming the DHCP scope "Technocrat_Clients"*
 
-![Select Configure DHCP Options Now](./phase-5-dns-dhcp-shared-folders/screenshots/30E_Select_Configure_DHCP_Options_Now.png)
-*Choosing to configure DHCP options immediately after scope creation*
+  ![Configure DHCP Scope IP Address Range](./Phase5.DNS_DHCP_Shared_Folders/27E.Configure_DHCP_Scope_IP_Address_Range.png)
+  *Setting the IP address range for the DHCP scope*
 
-![Skip Default Gateway Router Address Config](./phase-5-dns-dhcp-shared-folders/screenshots/31E_Skip_Default_Gateway_Router_Address_Config.png)
-*Skipping default gateway — not required for this lab scope*
+  ![Skip DHCP Exclusions And Delay](./Phase5.DNS_DHCP_Shared_Folders/28E.Skip_DHCP_Exclusions_And_Delay.png)
+  *Skipping exclusions — no IPs need to be reserved from the scope at this stage*
 
-![Domain Name And DNS Servers Config](./phase-5-dns-dhcp-shared-folders/screenshots/32E_Domain_Name_And_DNS_Servers_Config.png)
-*Setting technocrat.local as the domain name and 192.168.1.10 as the DNS server for DHCP clients*
+  ![Set DHCP Scope Lease Duration 8 Days](./Phase5.DNS_DHCP_Shared_Folders/29E.Set_DHCP_Scope_Lease_Duration_8_Days.png)
+  *Setting the DHCP lease duration to 8 days*
 
-![Activate New DHCP Scope Now](./phase-5-dns-dhcp-shared-folders/screenshots/33E_Activate_New_DHCP_Scope_Now.png)
-*Activating the new DHCP scope immediately*
+  ![Select Configure DHCP Options Now](./Phase5.DNS_DHCP_Shared_Folders/30E.Select_Configure_DHCP_Options_Now.png)
+  *Choosing to configure DHCP options immediately after scope creation*
 
-![Complete New Scope Wizard Finish](./phase-5-dns-dhcp-shared-folders/screenshots/34E_Complete_New_Scope_Wizard_Finish.png)
-*New Scope Wizard complete — Technocrat_Clients scope is now active*
+  ![Domain Name And DNS Servers Config](./Phase5.DNS_DHCP_Shared_Folders/31E.Domain_Name_And_DNS_Servers_Config.png)
+  *Setting technocrat.local as the domain name and 192.168.1.10 as the DNS server for DHCP clients*
 
-### Creating shared folders
+  ![Skip Default Gateway Router Address Config](./Phase5.DNS_DHCP_Shared_Folders/32E.Skip_Default_Gateway_Router_Address_Config.png)
+  *Skipping default gateway — not required for this lab scope*
 
-![Create New Folder Shares On C Drive](./phase-5-dns-dhcp-shared-folders/screenshots/35E_Create_New_Folder_Shares_On_C_Drive.png)
-*Creating a new Shares folder on the C: drive to host shared resources*
+  ![Activate New DHCP Scope Now](./Phase5.DNS_DHCP_Shared_Folders/33E.Activate_New_DHCP_Scope_Now.png)
+  *Activating the new DHCP scope immediately*
 
-![Create New Folder Shares On C Drive Detail](./phase-5-dns-dhcp-shared-folders/screenshots/36E_Create_New_Folder_Shares_On_C_Drive.png)
-*Shares folder created at C:\Shares on Technocrat-DC01*
+  ![Complete New Scope Wizard Finish](./Phase5.DNS_DHCP_Shared_Folders/34E.Complete_New_Scope_Wizard_Finish.png)
+  *New Scope Wizard complete — Technocrat_Clients scope is now active*
 
-![Create Sales Subfolder Within Shares](./phase-5-dns-dhcp-shared-folders/screenshots/37E_Create_Sales_Subfolder_Within_Shares.png)
-*Creating a Sales subfolder inside C:\Shares for the Sales department*
+  ---
 
-![Sales Folder Properties Menu Select](./phase-5-dns-dhcp-shared-folders/screenshots/38E_Sales_Folder_Properties_Menu_Select.png)
-*Opening the Sales folder properties to configure sharing*
+  ### Creating shared folders
+  *Setting up a centralized file share on the domain controller for departmental access.*
 
-![Select Advanced Sharing Options](./phase-5-dns-dhcp-shared-folders/screenshots/39E_Select_Advanced_Sharing_Options.png)
-*Selecting Advanced Sharing to configure share permissions manually*
+  ![Create New Folder Shares On C Drive](./Phase5.DNS_DHCP_Shared_Folders/35E.Create_New_Folder_Shares_On_C_Drive.png)
+  *Creating a new Shares folder on the C: drive to host shared resources*
 
-![Enable Advanced Sharing Shares Folder](./phase-5-dns-dhcp-shared-folders/screenshots/40E_Enable_Advanced_Sharing_Shares_Folder.png)
-*Enabling Advanced Sharing on the Sales folder*
+  ![Create New Folder Shares On C Drive](./Phase5.DNS_DHCP_Shared_Folders/36E.Create_New_Folder_Shares_On_C_Drive.png)
+  *Shares folder created at C:\Shares on Technocrat-DC01*
 
-### Configuring share & NTFS permissions
+  ![Create Sales Subfolder Within Shares](./Phase5.DNS_DHCP_Shared_Folders/37E.Create_Sales_Subfolder_Within_Shares.png)
+  *Creating a Sales subfolder inside C:\Shares for the Sales department*
 
-![Add Users Or Groups To Share Permissions](./phase-5-dns-dhcp-shared-folders/screenshots/41E_Add_Users_Or_Groups_To_Share_Permissions.png)
-*Adding users and groups to the Share permissions of the Sales folder*
+  ![Sales Folder Properties Menu Select](./Phase5.DNS_DHCP_Shared_Folders/38E.Sales_Folder_Properties_Menu_Select.png)
+  *Opening the Sales folder properties to configure sharing*
 
-![Add Users Or Groups Share Permissions Detail](./phase-5-dns-dhcp-shared-folders/screenshots/42E_Add_Users_Or_Groups_Share_Permissions.png)
-*Selecting specific security groups to grant share access*
+  ![Select Advanced Sharing Options](./Phase5.DNS_DHCP_Shared_Folders/39E.Select_Advanced_Sharing_Options.png)
+  *Selecting Advanced Sharing to configure share permissions manually*
 
-![Assign Sales Staff Group To Share Permissions](./phase-5-dns-dhcp-shared-folders/screenshots/43E_Assign_Sales-Staff_Group_To_Share_Permissions.png)
-*Assigning the Sales-Staff security group to the share permissions*
+  ![Enable Advanced Sharing Shares Folder](./Phase5.DNS_DHCP_Shared_Folders/40E.Enable_Advanced_Sharing_Shares_Folder.png)
+  *Enabling Advanced Sharing on the Sales folder*
 
-![Grant Change And Read Share Permissions To Sales Staff](./phase-5-dns-dhcp-shared-folders/screenshots/44E_Grant_Change_And_Read_Share_Permissions_To_Sales-Staff.png)
-*Granting Change and Read share permissions to Sales-Staff*
+  ---
 
-![Shares Security Tab Edit NTFS Permissions](./phase-5-dns-dhcp-shared-folders/screenshots/45E_Shares_Security_Tab_Edit_NTFS_Permissions.png)
-*Switching to the Security tab to configure NTFS permissions separately from share permissions*
+  ### Configuring share & NTFS permissions
+  *Applying layered Share and NTFS permissions to enforce least-privilege access control.*
 
-![Advanced Security Settings Read NTFS Permissions](./phase-5-dns-dhcp-shared-folders/screenshots/46E_Advanced_Security_Settings_Read_NTFS_Permissions.png)
-*Opening Advanced Security Settings to review current NTFS permission entries*
+  ![Add Users Or Groups To Share Permissions](./Phase5.DNS_DHCP_Shared_Folders/41E.Add_Users_Or_Groups_To_Share_Permissions.png)
+  *Adding users and groups to the Share permissions of the Sales folder*
 
-![Convert Inherited Permissions Remove Users NTFS](./phase-5-dns-dhcp-shared-folders/screenshots/47E_Convert_Inherited_Permissions_Remove_Users_NTFS.png)
-*Converting inherited permissions to explicit entries before making changes*
+  ![Add Users Or Groups To Share Permissions](./Phase5.DNS_DHCP_Shared_Folders/42E.Add_Users_Or_Groups_To_Share_Permissions.png)
+  *Selecting specific security groups to grant share access*
 
-![Remove Standard Users From NTFS Access List](./phase-5-dns-dhcp-shared-folders/screenshots/48E_Remove_Standard_Users_From_NTFS_Access_List.png)
-*Removing default Users group from NTFS access list to enforce least privilege*
+  ![Assign Sales-Staff Group To Share Permissions](./Phase5.DNS_DHCP_Shared_Folders/43E.Assign_Sales-Staff_Group_To_Share_Permissions.png)
+  *Assigning the Sales-Staff security group to the share permissions*
 
-![Advanced Security Settings Verify Clean NTFS Access List](./phase-5-dns-dhcp-shared-folders/screenshots/49E_Advanced_Security_Settings_Verify_Clean_NTFS_Access_List.png)
-*Verifying the cleaned NTFS access list before adding the correct groups*
+  ![Grant Change And Read Share Permissions To Sales-Staff](./Phase5.DNS_DHCP_Shared_Folders/44E.Grant_Change_And_Read_Share_Permissions_To_Sales-Staff.png)
+  *Granting Change and Read share permissions to Sales-Staff*
 
-![Select Principal For NTFS Permission Entry](./phase-5-dns-dhcp-shared-folders/screenshots/50E_Select_Principal_For_NTFS_Permission_Entry.png)
-*Selecting the security principal to assign NTFS permissions to*
+  ![Shares Security Tab Edit NTFS Permissions](./Phase5.DNS_DHCP_Shared_Folders/45E.Shares_Security_Tab_Edit_NTFS_Permissions.png)
+  *Switching to the Security tab to configure NTFS permissions separately from share permissions*
 
-![Assign Sales Staff As NTFS Principal](./phase-5-dns-dhcp-shared-folders/screenshots/51E_Assign_Sales-Staff_As_NTFS_Principal.png)
-*Assigning the Sales-Staff group as the NTFS permission principal*
+  ![Advanced Security Settings Remove Users NTFS Permissions](./Phase5.DNS_DHCP_Shared_Folders/46E.Advanced_Security_Settings_Remove_Users_NTFS_Permissions.png)
+  *Opening Advanced Security Settings — removing the default Users group to enforce least privilege*
 
-![Configure NTFS Read And Execute Permissions For Sales Staff](./phase-5-dns-dhcp-shared-folders/screenshots/52E_Configure_NTFS_Read_And_Execute_Permissions_For_Sales-Staff.png)
-*Configuring Read and Execute NTFS permissions for the Sales-Staff group*
+  ![Convert Inherited Permissions To Explicit](./Phase5.DNS_DHCP_Shared_Folders/47E.Convert_Inherited_Permissions_To_Explicit.png)
+  *Converting inherited permissions to explicit entries before making changes*
 
-### Drive mapping via GPO
+  ![Remove Standard Users From NTFS Access List](./Phase5.DNS_DHCP_Shared_Folders/48E.Remove_Standard_Users_From_NTFS_Access_List.png)
+  *Removing default Users group from NTFS access list to enforce least privilege*
 
-![Create And Link GPO To Sales OU](./phase-5-dns-dhcp-shared-folders/screenshots/53E_Create_And_Link_GPO_To_Sales_OU.png)
-*Creating and linking a new GPO to the Sales OU for drive mapping*
+  ![Advanced Security Settings Verify Clean NTFS Access List](./Phase5.DNS_DHCP_Shared_Folders/49E.Advanced_Security_Settings_Verify_Clean_NTFS_Access_List.png)
+  *Verifying the cleaned NTFS access list before adding the correct groups*
 
-![New GPO Create Mapped Drive Sales S](./phase-5-dns-dhcp-shared-folders/screenshots/54E_New_GPO_Create_Mapped_Drive_Sales-S.png)
-*Naming the new GPO for the Sales drive mapping*
+  ![Select Principal For NTFS Permission Entry](./Phase5.DNS_DHCP_Shared_Folders/50E.Select_Principal_For_NTFS_Permission_Entry.png)
+  *Selecting the security principal to assign NTFS permissions to*
 
-![Group Policy Management Edit Mapped Drive Sales S](./phase-5-dns-dhcp-shared-folders/screenshots/55E_Group_Policy_Management_Edit_MappedDrive-Sales-S.png)
-*Opening the Sales drive mapping GPO in the Group Policy Management Editor*
+  ![Assign Sales-Staff As NTFS Principal](./Phase5.DNS_DHCP_Shared_Folders/51E.Assign_Sales-Staff_As_NTFS_Principal.png)
+  *Assigning the Sales-Staff group as the NTFS permission principal*
 
-![GPMC Editor User Configuration Node](./phase-5-dns-dhcp-shared-folders/screenshots/56E_GPMC_Editor_User_Configuration_Node.png)
-*Navigating to User Configuration in the GPO editor*
+  ![Configure NTFS Read And Execute Permissions For Sales-Staff](./Phase5.DNS_DHCP_Shared_Folders/52E.Configure_NTFS_Read_And_Execute_Permissions_For_Sales-Staff.png)
+  *Configuring Read and Execute NTFS permissions for the Sales-Staff group*
 
-![GPMC Editor User Preferences Selection](./phase-5-dns-dhcp-shared-folders/screenshots/57E_GPMC_Editor_User_Preferences_Selection.png)
-*Expanding Preferences under User Configuration*
+  ---
 
-![GPMC Editor User Preferences Windows Settings](./phase-5-dns-dhcp-shared-folders/screenshots/58E_GPMC_Editor_User_Preferences_Windows_Settings.png)
-*Navigating into Windows Settings under User Preferences*
+  ### Drive mapping via GPO
+  *Automating network drive assignment for the Sales department using Group Policy Preferences.*
 
-![GPMC Editor Drive Maps Selection](./phase-5-dns-dhcp-shared-folders/screenshots/59E_GPMC_Editor_Drive_Maps_Selection.png)
-*Selecting Drive Maps to create a new mapped drive entry*
+  ![Create And Link GPO To Sales OU](./Phase5.DNS_DHCP_Shared_Folders/53E.Create_And_Link_GPO_To_Sales_OU.png)
+  *Creating and linking a new GPO to the Sales OU for drive mapping*
 
-![Right Click GPO Drive Map Select New Mapped Drive](./phase-5-dns-dhcp-shared-folders/screenshots/60E_Right_Click_GPO_Drive_Map_Select_New_Mapped_Drive.png)
-*Right-clicking to create a new mapped drive in the GPO*
+  ![New GPO Creation MappedDrive-Sales-S](./Phase5.DNS_DHCP_Shared_Folders/54E.New_GPO_Creation_MappedDrive-Sales-S.png)
+  *Naming the new GPO for the Sales drive mapping*
 
-![Configure GPO Drive Map S Path And Label](./phase-5-dns-dhcp-shared-folders/screenshots/61E_Configure_GPO_Drive_Map_S_Path_And_Label.png)
-*Configuring the mapped drive — UNC path to \\Technocrat-DC01\Sales and drive letter S:*
+  ![Group Policy Management Edit MappedDrive-Sales-S](./Phase5.DNS_DHCP_Shared_Folders/55E.Group_Policy_Management_Edit_MappedDrive-Sales-S.png)
+  *Opening the Sales drive mapping GPO in the Group Policy Management Editor*
 
-![GPO Common Tab Run In Logged On Security Context](./phase-5-dns-dhcp-shared-folders/screenshots/62E_GPO_Common_Tab_Run_In_Logged-On_Security_Context.png)
-*Setting the GPO Common tab to run in the logged-on user's security context*
+  ![GPMC Editor User Configuration Node](./Phase5.DNS_DHCP_Shared_Folders/56E.GPMC_Editor_User_Configuration_Node.png)
+  *Navigating to User Configuration in the GPO editor*
 
-### Verification
+  ![GPMC Editor User Preferences Selection](./Phase5.DNS_DHCP_Shared_Folders/57E.GPMC_Editor_User_Preferences_Selection.png)
+  *Expanding Preferences under User Configuration*
 
-![Logon To Sales M Lewis](./phase-5-dns-dhcp-shared-folders/screenshots/63E_Logon_To_Sales-Staff_Account_M-Lewis.png)
-*Logging onto the workstation as Sales user M. Lewis to test the drive mapping*
+  ![GPMC Editor User Preferences Windows Settings](./Phase5.DNS_DHCP_Shared_Folders/58E.GPMC_Editor_User_Preferences_Windows_Settings.png)
+  *Navigating into Windows Settings under User Preferences*
 
-![Verify S Drive Mapped Via Group Policy](./phase-5-dns-dhcp-shared-folders/screenshots/64E_Verify_S_Drive_Mapped_Via_Group_Policy.png)
-*S: drive successfully mapped via Group Policy on the Sales user's desktop*
+  ![GPMC Editor User Preferences Drive Maps Selection](./Phase5.DNS_DHCP_Shared_Folders/59E.GPMC_Editor_User_Preferences_Drive_Maps_Selection.png)
+  *Selecting Drive Maps to create a new mapped drive entry*
 
-![Verify Sales Folder Access Within S Drive](./phase-5-dns-dhcp-shared-folders/screenshots/65E_Verify_Sales_Folder_Access_Within_S_Drive.png)
-*Confirming Sales-Staff can access and browse the S: drive contents as expected*
+  ![Right Click Drive Maps Select New Mapped Drive](./Phase5.DNS_DHCP_Shared_Folders/60E.Right_Click_Drive_Maps_Select_New_Mapped_Drive.png)
+  *Right-clicking to create a new mapped drive in the GPO*
+
+  ![Configure GPO Drive Map S Path And Label](./Phase5.DNS_DHCP_Shared_Folders/61E.Configure_GPO_Drive_Map_S_Path_And_Label.png)
+  *Configuring the mapped drive — UNC path to \\Technocrat-DC01\Sales and drive letter S:*
+
+  ![GPO Common Tab Run In Logged-On Security Context](./Phase5.DNS_DHCP_Shared_Folders/62E.GPO_Common_Tab_Run_In_Logged-On_Security_Context.png)
+  *Setting the GPO Common tab to run in the logged-on user's security context*
+
+  ---
+
+  ### Verification
+  *Confirming the drive mapping and folder access work correctly for a Sales department user.*
+
+  ![Logon To Sales-Staff Account M-Lewis](./Phase5.DNS_DHCP_Shared_Folders/63E.Logon_To_Sales-Staff_Account_M-Lewis.png)
+  *Logging onto the workstation as Sales user M. Lewis to test the drive mapping*
+
+  ![Verify S Drive Mapped Via Group Policy](./Phase5.DNS_DHCP_Shared_Folders/64E.Verify_S_Drive_Mapped_Via_Group_Policy.png)
+  *S: drive successfully mapped via Group Policy on the Sales user's desktop*
+
+  ![Verify Sales Folder Access Within S Drive](./Phase5.DNS_DHCP_Shared_Folders/65E.Verify_Sales_Folder_Access_Within_S_Drive.png)
+  *Confirming Sales-Staff can access and browse the S: drive contents as expected*
+
+</details>
 
 ---
 
