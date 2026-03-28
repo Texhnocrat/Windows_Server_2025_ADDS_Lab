@@ -1092,60 +1092,78 @@ technocrat.local
 - [x] Resolve a DNS resolution issue
 - [x] Use PowerShell to query last logon date: `Get-ADUser -Identity <user> -Properties LastLogonDate`
 
-### Finding and unlocking a user account
+<details>
+  <summary><b>Click to expand: Phase 6 - Help Desk Simulation Scenarios (15 Screenshots)</b></summary>
 
-![ADUC Search Icon Select](./phase-6-helpdesk-simulations/screenshots/1F_ADUC_Search_Icon_Select.png)
-*Using the ADUC search function to locate a user account quickly*
+  ### Finding and unlocking a user account
+  *Simulating a real help desk ticket — locating and unlocking a locked-out domain user account.*
 
-![ADUC Find Users Contacts Groups Dialog](./phase-6-helpdesk-simulations/screenshots/2F_ADUC_Find_Users_Contacts_Groups_Dialog.png)
-*Find Users, Contacts and Groups dialog — searching across the entire domain*
+  ![ADUC Search Icon Select](./Phase6.Help_Desk_Scenarios/01F.ADUC_Search_Icon_Select.png)
+  *Using the ADUC search function to locate a user account quickly*
 
-![ADUC Search Result Emily Scott](./phase-6-helpdesk-simulations/screenshots/3F_ADUC_Search_Result_Emily_Scott.png)
-*Search results returning Emily Scott's account*
+  ![ADUC Find Users Contacts Groups Dialog](./Phase6.Help_Desk_Scenarios/02F.ADUC_Find_Users_Contacts_Groups_Dialog.png)
+  *Find Users, Contacts and Groups dialog — searching across the entire domain*
 
-![Unlock Emily Scott Account Properties](./phase-6-helpdesk-simulations/screenshots/4F_Unlock_Emily_Scott_Account_Properties.png)
-*Opening Emily Scott's account properties — Account tab showing the account is locked out*
+  ![ADUC Search Result Emily Scott](./Phase6.Help_Desk_Scenarios/03F.ADUC_Search_Result_Emily_Scott.png)
+  *Search results returning Emily Scott's account*
 
-### Password reset
+  ![Unlock Emily Scott Account Properties](./Phase6.Help_Desk_Scenarios/04F.Unlock_Emily_Scott_Account_Properties.png)
+  *Opening Emily Scott's account properties — Account tab showing the account is locked out*
 
-![Right Click User Select Reset Password](./phase-6-helpdesk-simulations/screenshots/5F_Right_Click_User_Select_Reset_Password.png)
-*Right-clicking a user account to select Reset Password*
+  ---
 
-![Enter New Password Enforce Change At Logon](./phase-6-helpdesk-simulations/screenshots/6F_Enter_New_Password_Enforce_Change_At_Logon.png)
-*Setting a temporary password with "User must change password at next logon" enforced*
+  ### Password reset
+  *Resetting a user's password and enforcing a change on next logon — a daily help desk task.*
 
-### Disabling an account
+  ![Right Click User Select Reset Password](./Phase6.Help_Desk_Scenarios/05F.Right_Click_User_Select_Reset_Password.png)
+  *Right-clicking a user account to select Reset Password*
 
-![Right Click Karen Disable Account](./phase-6-helpdesk-simulations/screenshots/7F_Right_Click_Karen_Disable_Account.png)
-*Right-clicking Karen's account and selecting Disable Account*
+  ![Enter New Password Enforce Change At Logon](./Phase6.Help_Desk_Scenarios/06F.Enter_New_Password_Enforce_Change_At_Logon.png)
+  *Setting a temporary password with "User must change password at next logon" enforced*
 
-![Move Disabled Account To Disabled Accounts OU](./phase-6-helpdesk-simulations/screenshots/8F_Move_Disabled_Account_To_Disabled_Accounts_OU.png)
-*Moving the disabled account into the Disabled Accounts OU for clean AD organization*
+  ---
 
-### Adding a user to a group
+  ### Disabling an account
+  *Disabling a departed user's account and moving it to the Disabled Accounts OU for clean AD hygiene.*
 
-![VPN Users Group Properties Members Tab](./phase-6-helpdesk-simulations/screenshots/9F_VPN_Users_Group_Properties_Members_Tab.png)
-*Opening the GS-VPN-Users group properties to view and manage members*
+  ![Right Click Karen Disable Account](./Phase6.Help_Desk_Scenarios/07F.Right_Click_Karen_Disable_Account.png)
+  *Right-clicking Karen's account and selecting Disable Account*
 
-![Add Brian Hall To VPN Users Group](./phase-6-helpdesk-simulations/screenshots/10F_Add_Brian_Hall_To_VPN_Users_Group.png)
-*Adding Brian Hall to the GS-VPN-Users security group*
+  ![Move Disabled Account To Disabled Accounts OU](./Phase6.Help_Desk_Scenarios/08F.Move_Disabled_Account_To_Disabled_Accounts_OU.png)
+  *Moving the disabled account into the Disabled Accounts OU for clean AD organization*
 
-![Confirm Brian Hall Membership VPN Users](./phase-6-helpdesk-simulations/screenshots/11F_Confirm_Brian_Hall_Membership_VPN_Users.png)
-*Members tab confirming Brian Hall is now a member of GS-VPN-Users*
+  ---
 
-### Advanced features & PowerShell query
+  ### Adding a user to a group
+  *Granting a user access to a resource by adding them to the appropriate security group.*
 
-![ADUC View Menu Enable Advanced Features](./phase-6-helpdesk-simulations/screenshots/12F_ADUC_View_Menu_Enable_Advanced_Features.png)
-*Enabling Advanced Features in the ADUC View menu to expose additional account attributes*
+  ![VPN Users Group Properties Members Tab](./Phase6.Help_Desk_Scenarios/09F.VPN_Users_Group_Properties_Members_Tab.png)
+  *Opening the GS-VPN-Users group properties to view and manage members*
 
-![Right Click Abel Schu Select Properties](./phase-6-helpdesk-simulations/screenshots/13F_Right_Click_Abel_Schu_Select_Properties.png)
-*Opening Abel Scheheelein's full properties with Advanced Features enabled*
+  ![Add Brian Hall To VPN Users Group](./Phase6.Help_Desk_Scenarios/10F.Add_Brian_Hall_To_VPN_Users_Group.png)
+  *Adding Brian Hall to the GS-VPN-Users security group*
 
-![Abel Schu Properties Attribute Editor Last Logon](./phase-6-helpdesk-simulations/screenshots/14F_Abel_Schu_Properties_Attribute_Editor_LastLogon.png)
-*Attribute Editor tab showing Abel's LastLogon timestamp — useful for identifying inactive accounts*
+  ![Confirm Brian Hall Membership VPN Users](./Phase6.Help_Desk_Scenarios/11F.Confirm_Brian_Hall_Membership_VPN_Users.png)
+  *Members tab confirming Brian Hall is now a member of GS-VPN-Users*
 
-![PowerShell Get-ADUser Abel Schu Last Logon Date](./phase-6-helpdesk-simulations/screenshots/15F_PowerShell_Get-ADUser_Abel_Schu_LastLogonDate.png)
-*Running Get-ADUser -Identity Abel_Schu -Properties LastLogonDate in PowerShell — confirming the same data via command line*
+  ---
+
+  ### Advanced features & PowerShell query
+  *Using the Attribute Editor and PowerShell to audit user account activity and last logon data.*
+
+  ![ADUC View Menu Enable Advanced Features](./Phase6.Help_Desk_Scenarios/12F.ADUC_View_Menu_Enable_Advanced_Features.png)
+  *Enabling Advanced Features in the ADUC View menu to expose additional account attributes*
+
+  ![Right Click Abel Schu Select Properties](./Phase6.Help_Desk_Scenarios/13F.Right_Click_Abel_Schu_Select_Properties.png)
+  *Opening Abel Scheheelein's full properties with Advanced Features enabled*
+
+  ![Abel Schu Properties Attribute Editor LastLogon](./Phase6.Help_Desk_Scenarios/14F.Abel_Schu_Properties_Attribute_Editor_LastLogon.png)
+  *Attribute Editor tab showing Abel's LastLogon timestamp — useful for identifying inactive accounts*
+
+  ![PowerShell Get-ADUser Abel Schu LastLogonDate](./Phase6.Help_Desk_Scenarios/15F.PowerShell_Get-ADUser_Abel_Schu_LastLogonDate.png)
+  *Running Get-ADUser -Identity Abel_Schu -Properties LastLogonDate in PowerShell — confirming the same data via command line*
+
+</details>
 
 ---
 
