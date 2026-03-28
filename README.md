@@ -712,105 +712,123 @@ technocrat.local
 - [x] Test domain user authentication and profile creation
 - [x] Verify GPO application with `gpresult /r` and `gpupdate /force`
 
-### Preparing the client for domain join
+<details>
+  <summary><b>Click to expand: Phase 4 - Joining the Windows 11 Client to the Domain (30 Screenshots)</b></summary>
 
-![Initial Local Logon Prompt](./phase-4-client-domain-join/screenshots/1D_Initial_Local_Logon_Prompt.png)
-*Logging into the Windows 11 workstation locally as Workstation.1 before domain join*
+  ### 1. Preparing the client for domain join
+  *Configuring the workstation's network stack to communicate with the Technocrat Domain Controller.*
 
-![Navigate Settings DNS Config](./phase-4-client-domain-join/screenshots/2D_Navigate_Settings_DNS_Config.png)
-*Opening network settings on the client to configure DNS*
+  ![Initial Local Logon Prompt](./Phase4.Join_Client_To_DC/01D.%20Initial_Local_Logon_Prompt.png)
+  *Logging into the Windows 11 workstation locally as Workstation.1 before domain join*
 
-![Network Internet Settings](./phase-4-client-domain-join/screenshots/3D_Network_Internet_Settings.png)
-*Network and Internet settings panel on Windows 11*
+  ![Navigate Settings DNS Config](./Phase4.Join_Client_To_DC/02D.%20Navigate_Settings_DNS_Config.png)
+  *Opening network settings on the client to configure DNS*
 
-![Edit DNS Settings Manual Selection](./phase-4-client-domain-join/screenshots/4D_Edit_DNS_Settings_Manual_Selection.png)
-*Switching DNS configuration to manual entry*
+  ![Network Internet Settings](./Phase4.Join_Client_To_DC/03D.%20Network_Internet_Settings.png)
+  *Network and Internet settings panel on Windows 11*
 
-![Enable IPv4 DNS Manual Config](./phase-4-client-domain-join/screenshots/5D_Enable_IPv4_DNS_Manual_Config.png)
-*Enabling manual IPv4 DNS configuration*
+  ![Edit DNS Settings Manual Selection](./Phase4.Join_Client_To_DC/04D.%20Edit_DNS_Settings_Manual_Selection.png)
+  *Switching DNS configuration to manual entry*
 
-![Set Preferred DNS to DC IP](./phase-4-client-domain-join/screenshots/6D_Set_Preferred_DNS_to_DC_IP.png)
-*Setting the preferred DNS server to 192.168.1.10 — pointing the client at Technocrat-DC01*
+  ![Enable IPv4 DNS Manual Config](./Phase4.Join_Client_To_DC/05D.%20Enable_IPv4_DNS_Manual_Config.png)
+  *Enabling manual IPv4 DNS configuration*
 
-![Verify Client DNS Assignment](./phase-4-client-domain-join/screenshots/7D_Verify_Client_DNS_Assignment.png)
-*Confirming the DNS setting is saved correctly on the client*
+  ![Set Preferred DNS to DC IP](./Phase4.Join_Client_To_DC/06D.%20Set_Preferred_DNS_to_DC_IP.png)
+  *Setting the preferred DNS server to 192.168.1.10 — pointing the client at Technocrat-DC01*
 
-### Troubleshooting connectivity
+  ![Verify Client DNS Assignment](./Phase4.Join_Client_To_DC/07D.%20Verify_Client_DNS_Assignment.png)
+  *Confirming the DNS setting is saved correctly on the client*
 
-![Quick Link Menu Select System](./phase-4-client-domain-join/screenshots/8D_Quick_Link_Menu_Select_System.png)
-*Opening System properties via the Quick Link menu*
+  ---
 
-![System About Select Advanced Settings](./phase-4-client-domain-join/screenshots/9D_System_About_Select_Advanced_Settings.png)
-*Navigating to Advanced System Settings*
+  ### 2. Troubleshooting connectivity
+  *Identifying and resolving common DNS resolution and IP subnetting issues to reach the DC.*
 
-![System Properties Computer Name Tab](./phase-4-client-domain-join/screenshots/10D_System_Properties_Computer_Name_Tab.png)
-*System Properties Computer Name tab — starting point for domain join*
+  ![Quick Link Menu Select System](./Phase4.Join_Client_To_DC/08D.%20Quick_Link_Menu_Select_System.png)
+  *Opening System properties via the Quick Link menu*
 
-![Computer Name Changes Dialog](./phase-4-client-domain-join/screenshots/11D_Computer_Name_Changes_Dialog.png)
-*Computer Name/Domain Changes dialog box*
+  ![System About Select Advanced Settings](./Phase4.Join_Client_To_DC/09D.%20System_About_Select_Advanced_Settings.png)
+  *Navigating to Advanced System Settings*
 
-![Rename Client Computer Name Field](./phase-4-client-domain-join/screenshots/13D_Rename_Client_Computer_Name_Field.png)
-*Entering the computer name for the workstation*
+  ![System Properties Computer Name Tab](./Phase4.Join_Client_To_DC/10D.%20System_Properties_Computer_Name_Tab.png)
+  *System Properties Computer Name tab — starting point for domain join*
 
-![Set Computer Name and Domain Field](./phase-4-client-domain-join/screenshots/14D_Set_Computer_Name_And_Domain_Field.png)
-*Entering technocrat.local in the domain field to initiate the domain join*
+  ![Computer Name Changes Dialog](./Phase4.Join_Client_To_DC/11D.%20Computer_Name_Changes_Dialog.png)
+  *Computer Name/Domain Changes dialog box*
 
-![Domain Controller Unreachable DNS Error](./phase-4-client-domain-join/screenshots/15D_Domain_Controller_Unreachable_DNS_Error.png)
-*Domain controller unreachable error — DNS not resolving correctly, troubleshooting begins*
+  ![Rename Client Computer Field](./Phase4.Join_Client_To_DC/12D.%20Rename_Client_Computer_Field.png)
+  *Entering the computer name for the workstation*
 
-![Manual IPv4 Static IP Assignment](./phase-4-client-domain-join/screenshots/16D_Manual_IPv4_Static_IP_Assignment.png)
-*Assigning a static IP to the client to ensure it is on the same subnet as the DC*
+  ![Set Computer Name and Domain Field](./Phase4.Join_Client_To_DC/13D.%20Set_Computer_Name_And_Domain_Field.png)
+  *Entering technocrat.local in the domain field to initiate the domain join*
 
-![Ping DC IP Connectivity Success](./phase-4-client-domain-join/screenshots/17D_Ping_DC_IP_Connectivity_Success.png)
-*Pinging the DC at 192.168.1.10 — successful reply confirms network connectivity*
+  ![Domain Controller Unreachable DNS Error](./Phase4.Join_Client_To_DC/14D.%20Domain_Controller_Unreachable_DNS_Error.png)
+  *Domain controller unreachable error — DNS resolution troubleshooting begins*
 
-![NSLookup Verify Domain DNS Resolution](./phase-4-client-domain-join/screenshots/18D_NSLookup_Verify_Domain_DNS_Resolution.png)
-*Running NSLookup to verify the client can resolve technocrat.local via the DC's DNS*
+  ![Manual IPv4 Static IP Assignment](./Phase4.Join_Client_To_DC/15D.%20Manual_IPv4_Static_IP_Assignment.png)
+  *Assigning a static IP to the client to ensure it is on the same subnet as the DC*
 
-![Retry Domain Join After DNS Fix](./phase-4-client-domain-join/screenshots/19D_Retry_Domain_Join_After_DNS_Fix.png)
-*Retrying the domain join after resolving the DNS connectivity issue*
+  ![Ping DC IP Connectivity Success](./Phase4.Join_Client_To_DC/16D.%20Ping_DC_IP_Connectivity_Success.png)
+  *Pinging the DC at 192.168.1.10 — successful reply confirms network connectivity*
 
-### Joining the domain
+  ![NSLookup Verify Domain DNS Resolution](./Phase4.Join_Client_To_DC/17D.%20NSLookup_Verify_Domain_DNS_Resolution.png)
+  *Running NSLookup to verify the client can resolve technocrat.local via the DC's DNS*
 
-![Domain Admin Credentials Join Prompt](./phase-4-client-domain-join/screenshots/20D_Domain_Admin_Credentials_Join_Prompt.png)
-*Entering domain administrator credentials to authorize the domain join*
+  ![Retry Domain Join After DNS Fix](./Phase4.Join_Client_To_DC/18D.%20Retry_Domain_Join_After_DNS_Fix.png)
+  *Retrying the domain join after resolving the DNS connectivity issue*
 
-![Confirm Domain Admin Credentials](./phase-4-client-domain-join/screenshots/21D_Confirm_Domain_Admin_Credentials.png)
-*Confirming the administrator credentials for technocrat.local*
+  ---
 
-![Welcome to Domain Success Message](./phase-4-client-domain-join/screenshots/22D_Welcome_To_Domain_Success_Message.png)
-*"Welcome to the technocrat.local domain" — domain join successful*
+  ### 3. Joining the domain
+  *Authorizing the workstation's membership within the Technocrat Active Directory forest.*
 
-![Restart Now Post Domain Join](./phase-4-client-domain-join/screenshots/23D_Restart_Now_Post_Domain_Join.png)
-*Restarting the workstation to complete the domain join process*
+  ![Domain Admin Credentials Join Prompt](./Phase4.Join_Client_To_DC/19D.%20Domain_Admin_Credentials_Join_Prompt.png)
+  *Entering domain administrator credentials to authorize the domain join*
 
-### First domain user logon
+  ![Confirm Domain Admin Credentials](./Phase4.Join_Client_To_DC/20D.%20Confirm_Domain_Admin_Credentials.png)
+  *Confirming the administrator credentials for technocrat.local*
 
-![Select Other User For Domain Logon](./phase-4-client-domain-join/screenshots/24D_Select_Other_User_For_Domain_Logon.png)
-*Selecting "Other user" on the login screen to log in as a domain account*
+  ![Welcome to Domain Success Message](./Phase4.Join_Client_To_DC/21D.%20Welcome_To_Domain_Success_Message.png)
+  *"Welcome to the technocrat.local domain" — domain join successful*
 
-![Domain User Abel Schu Initial Logon](./phase-4-client-domain-join/screenshots/25D_Domain_User_Abel_Schu_Initial_Logon.png)
-*Logging in as domain user Abel Scheheelein for the first time on the workstation*
+  ![Restart Now Post Domain Join](./Phase4.Join_Client_To_DC/22D.%20Restart_Now_Post_Domain_Join.png)
+  *Restarting the workstation to complete the domain join process*
 
-![First Logon Password Change Requirement](./phase-4-client-domain-join/screenshots/26D_First_Logon_Password_Change_Requirement.png)
-*Password change prompt on first logon — confirming the "must change at next logon" policy is enforced*
+  ---
 
-![Password Change Confirmation Success](./phase-4-client-domain-join/screenshots/27D_Password_Change_Confirmation_Success.png)
-*Password successfully changed — user proceeds to the desktop*
+  ### 4. First domain user logon
+  *Testing the integration by logging in with a managed user account.*
 
-![Hyper-V Enhanced Session RDP Restriction Error](./phase-4-client-domain-join/screenshots/28D_Hyper-V_Enhanced_Session_RDP_Restriction_Error.png)
-*Enhanced Session RDP restriction error encountered — documented as a real troubleshooting scenario*
+  ![Select Other User For Domain Logon](./Phase4.Join_Client_To_DC/23D.%20Select_Other_User_For_Domain_Logon.png)
+  *Selecting "Other user" on the login screen to log in as a domain account*
 
-![Enter Domain User Credentials TECHNOCRAT](./phase-4-client-domain-join/screenshots/29D_Enter_Domain_User_Credentials_TECHNOCRAT.png)
-*Entering TECHNOCRAT domain credentials at the login prompt*
+  ![Domain User Abel Schu Initial Logon](./Phase4.Join_Client_To_DC/24D.%20Domain_User_Abel_Schu_Initial_Logon.png)
+  *Logging in as domain user Abel Schuehlein for the first time*
 
-![Verify Domain User Profile Start Menu](./phase-4-client-domain-join/screenshots/30D_Verify_Domain_User_Profile_Start_Menu.png)
-*Domain user profile successfully created — Start Menu confirming Abel is logged in*
+  ![First Logon Password Change Requirement](./Phase4.Join_Client_To_DC/25D.%20First_Logon_Password_Change_Requirement.png)
+  *Password change prompt on first logon — confirming policy enforcement*
 
-### Post-logon verification
+  ![Hyper-V Enhanced Session RDP Restriction Error](./Phase4.Join_Client_To_DC/26D.%20Hyper-V_Enhanced_Session_RDP_Restriction_Error.png)
+  *Enhanced Session RDP restriction error encountered during setup*
 
-![Whoami All Verify Domain User Context](./phase-4-client-domain-join/screenshots/31D_Whoami_All_Verify_Domain_User_Context.png)
-*Running whoami /all in Command Prompt — confirming domain user context, group memberships, and SID*
+  ![Enter Domain User Credentials TECHNOCRAT](./Phase4.Join_Client_To_DC/27D.%20Enter_Domain_User_Credentials_TECHNOCRAT.png)
+  *Entering TECHNOCRAT domain credentials at the login prompt*
+
+  ![Password Change Confirmation Success](./Phase4.Join_Client_To_DC/28D.%20Password_Change_Confirmation_Success.png)
+  *Password successfully changed — user proceeds to the desktop*
+
+  ![Verify Domain User Profile Start Menu](./Phase4.Join_Client_To_DC/29D.%20Verify_Domain_User_Profile_Start_Menu.png)
+  *Domain user profile successfully created — Start Menu confirming Abel is logged in*
+
+  ---
+
+  ### 5. Post-logon verification
+  *Confirming the security context and identity of the active session.*
+
+  ![Whoami All Verify Domain User Context](./Phase4.Join_Client_To_DC/30D.%20Whoami_All_Verify_Domain_User_Context.png)
+  *Running whoami /all in Command Prompt — confirming domain user context and SIDs*
+
+</details>
 
 ---
 
