@@ -1183,26 +1183,25 @@ technocrat.local
   ### Building and running the bulk user import script
   *Automating the creation of 50 Active Directory user accounts using a PowerShell script and CSV data source.*
 
-  ![User Data Source CSV File Preparation](./Phase50.50_Users_Script/01Z.User_Data_Source_CSV_File_Preparation.png)
+  ![User Data Source CSV File Preparation](./Z_50_Users_Script_CSV/01Z.User_Data_Source_CSV_File_Preparation.png)
   *The CSV file containing 50 randomly generated user first and last names — the data source for the bulk import script*
 
-  ![Initializing Users50 CSV Import File](./Phase50.50_Users_Script/02Z.Initializing_Users50_CSV_Import_File.png)
+  ![Initializing Users50 CSV Import File](./Z_50_Users_Script_CSV/02Z.Initializing_Users50_CSV_Import_File.png)
   *Initializing the CSV file in preparation for the PowerShell import script*
 
-  ![Storing Users50 CSV in Lab Root Folder](./Phase50.50_Users_Script/03Z.Storing_Users50_CSV_in_Lab_Root_Folder.png)
+  ![Storing Users50 CSV in Lab Root Folder](./Z_50_Users_Script_CSV/03Z.Storing_Users50_CSV_in_Lab_Root_Folder.png)
   *Storing the CSV file in a dedicated lab root folder for clean file organization*
 
-  ![Launching PowerShell ISE as Administrator](./Phase50.50_Users_Script/04Z.Launching_PowerShell_ISE_as_Administrator.png)
+  ![Launching PowerShell ISE as Administrator](./Z_50_Users_Script_CSV/04Z.Launching_PowerShell_ISE_as_Administrator.png)
   *Launching PowerShell ISE as Administrator — required to execute AD cmdlets*
 
-  ![PowerShell Script Bulk Importing Users from CSV](./Phase50.50_Users_Script/05Z.PowerShell_Script_Bulk_Importing_Users_from_CSV.png)
+  ![PowerShell Script Bulk Importing Users from CSV](./Z_50_Users_Script_CSV/05Z.PowerShell_Script_Bulk_Importing_Users_from_CSV.png)
   *The PowerShell script running — looping through the CSV and creating each user account in ADUC under the Lab-Users OU*
 
-  ![ADUC Bulk User Import Verification Lab-Users OU](./Phase50.50_Users_Script/06Z.ADUC_Bulk_User_Import_Verification_Lab-Users_OU.png)
+  ![ADUC Bulk User Import Verification Lab-Users OU](./Z_50_Users_Script_CSV/06Z.ADUC_Bulk_User_Import_Verification_Lab-Users_OU.png)
   *ADUC confirming all 50 users successfully imported into the Lab-Users OU — script executed without errors*
 
 </details>
-
 ---
 
 ## Skills Demonstrated
