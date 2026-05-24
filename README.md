@@ -26,7 +26,7 @@ This repo documents the deployment of a Windows Server Active Directory environm
 
 The reason this lab is so detailed is because I wanted to not only showcase what I've learned, but also give a step by step walkthrough for others who like to learn, and it's something I can come back to in the future if I ever need a refresher.
 
-The lab simulates the kind of environment a help desk techn or junior sysadmin would interact with daily — domain joined workstations, user account management, Group Policy enforcement, DNS/DHCP configuration, shared folder permissions, and real help desk scenarios like account lockouts and password resets.
+The lab simulates the kind of environment a help desk tech or junior sysadmin would interact with daily — domain joined workstations, user account management, Group Policy enforcement, DNS/DHCP configuration, shared folder permissions, and real help desk scenarios like account lockouts and password resets.
 
 ---
 
