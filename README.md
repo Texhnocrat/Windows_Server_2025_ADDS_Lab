@@ -1,6 +1,6 @@
 # Windows Server 2025 & Windows 11 Enterprise Lab
 
-> A fully documented, professional grade Active Directory home lab built in Hyper-V, demonstrating hands on proficiency in System Administration, Active Directory Domain Services, Group Policy, Network Infrastructure, and PowerShell Automation.
+> A fully documented, professional grade Active Directory home lab built in Hyper-V, demonstrating hands on experience in System Administration, Active Directory Domain Services, Group Policy, Network Infrastructure, and PowerShell Automation.
 
 ---
 
@@ -22,9 +22,11 @@
 
 ## Lab Overview
 
-This repository documents the end-to-end deployment of a Windows Server 2025 Active Directory environment, built entirely from scratch inside Hyper-V. Every phase is fully documented with annotated screenshots that explain not just *what* was done, but *why* each step matters in a real enterprise environment.
+This repo documents the deployment of a Windows Server Active Directory environment, built entirely from scratch inside Hyper-V. Every phase of this lab is fully documented with annotated screenshots that explain not just *what* was done, but *why* each step matters in a real enterprise environment. 
 
-The lab simulates the kind of infrastructure a help desk technician or junior sysadmin would interact with daily — domain-joined workstations, user account management, Group Policy enforcement, DNS/DHCP configuration, shared folder permissions, and real help desk scenarios like account lockouts and password resets.
+The reason this lab is so detailed is because I wanted to not only showcase what I've learned, but also give a step by step walkthrough for others who like to learn, and it's something I can come back to in the future if I ever need a refresher.
+
+The lab simulates the kind of environment a help desk techn or junior sysadmin would interact with daily — domain joined workstations, user account management, Group Policy enforcement, DNS/DHCP configuration, shared folder permissions, and real help desk scenarios like account lockouts and password resets.
 
 ---
 
